@@ -3,9 +3,18 @@
     transform: translateX(100px);
 }
 
-
-.skill-card, .project-card, .experience-card {
+/* Light theme styles */
+html[data-theme='light'] .skill-card, 
+html[data-theme='light'] .project-card, 
+html[data-theme='light'] .experience-card {
     background-color: var(--bg-light, #f7f7f7); 
-  }
+}
+
+/* Dark theme styles */
+html[data-theme='dark'] .skill-card, 
+html[data-theme='dark'] .project-card, 
+html[data-theme='dark'] .experience-card {
+    background-color: var(--bg-dark, #333); 
+}
 
 

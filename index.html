@@ -1,51 +1,51 @@
-<!doctype html>
-<html>
+<!doctype html> 
+<html class="dark:bg-gray-900 dark:text-gray-100" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="script.js"></script>
-
-</head>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script></head>
   
 <body>
 
   <div class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2 dark:bg-gray-700 dark:border-gray-600">
     <div class="grid h-full max-w-lg grid-cols-5 mx-auto">
-      <button data-tooltip-target="tooltip-home" type="button" class="inline-flex flex-col items-center justify-center px-5 rounded-s-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
+      <a href="#intro" class="inline-flex flex-col items-center justify-center px-5 rounded-s-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
         <svg class="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
           <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
         </svg>
         <span class="sr-only">Home</span>
-      </button>
-      <button data-tooltip-target="tooltip-wallet" type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
+      </a>
+      <a href="#skills" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
         <svg class="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
           <path d="M11.074 4 8.442.408A.95.95 0 0 0 7.014.254L2.926 4h8.148ZM9 13v-1a4 4 0 0 1 4-4h6V6a1 1 0 0 0-1-1H1a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-2h-6a4 4 0 0 1-4-4Z"/>
           <path d="M19 10h-6a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1Zm-4.5 3.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM12.62 4h2.78L12.539.41a1.086 1.086 0 1 0-1.7 1.352L12.62 4Z"/>
         </svg>
         <span class="sr-only">Wallet</span>
-      </button>
+      </a>
       <div class="flex items-center justify-center">
-        <button data-tooltip-target="tooltip-new" type="button" class="inline-flex items-center justify-center w-10 h-10 font-medium bg-blue-600 rounded-full hover:bg-blue-700 group focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+        <a href="#projects" class="inline-flex items-center justify-center w-10 h-10 font-medium bg-blue-600 rounded-full hover:bg-blue-700 group focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
           <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
           </svg>
           <span class="sr-only">New item</span>
-        </button>
+        </a>
       </div>
-      <button data-tooltip-target="tooltip-settings" type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
+      <a href="#experience" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
         <svg class="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12.25V1m0 11.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M4 19v-2.25m6-13.5V1m0 2.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M10 19V7.75m6 4.5V1m0 11.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM16 19v-2"/>
         </svg>
         <span class="sr-only">Settings</span>
-      </button>
-      <button data-tooltip-target="tooltip-profile" type="button" class="inline-flex flex-col items-center justify-center px-5 rounded-e-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
+      </a>
+      <a href="#contact" class="inline-flex flex-col items-center justify-center px-5 rounded-e-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
         <svg class="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
           <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z"/>
         </svg>
         <span class="sr-only">Profile</span>
-      </button>
+      </a>
     </div>
   </div>
 
@@ -58,6 +58,7 @@
       <button class="btn btn-ghost text-xl">Chat</button>
     </div>
   </div>
+
   <div class="w-full max-w-[1000px] px-8 md:px-10 mx-auto">
     <section class="flex h-[calc(100vh-100px)] flex-col items-center justify-center" id="intro">
       <div class="text-center">
@@ -65,50 +66,94 @@
         <h2 class="text-4xl font-light">an amatuer Web Designer and a CSI Student</h2>
       </div>
     </section>
-    <section class="py-16 text-left">
-      <div class="w-full max-w-[1000px] px-8 md:px-10 mx-auto">
-        <h3 class="text-3xl font-semibold ">About me</h3>
-        <p>Welcome to my portfolio. I was born in 2009 and I go to high school at CodeRVA. I started programming six years ago and have continued to do so ever since. </p>
-      </div>
     </section>
+<section class="py-16 text-left">
+  <div class="w-full max-w-[1000px] px-8 md:px-10 mx-auto">
+    <h3 class="text-3xl font-semibold ">About me</h3>
+    <p>Welcome to my portfolio. I was born in 2009 and I go to high school at CodeRVA. I started programming six years ago and have continued to do so ever since. </p>
+  </div>
+</section>
 
-    <section class="py-16 text-left" id="skills">
-      <div class="w-full max-w-[1000px] px-8 md:px-10 mx-auto">
-        <h3 class="text-3xl font-semibold">Skills</h3>
-        <p class="text-lg mt-4">I specialize in web design. I try to make sites have the best user experience possible.</p>
+<section class="py-16 text-left" id="skills">
+  <div class="w-full max-w-[1000px] px-8 md:px-10 mx-auto">
+    <h3 class="text-3xl font-semibold">Skills</h3>
+    <p class="text-lg mt-4">I specialize in web design. I try to make sites have the best user experience possible.</p>
+  </div>
+  <div class="w-full max-w-[1000px] px-8 md:px-10 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-8">
+    <div class="skill-card flex flex-col items-center justify-center p-6 rounded-md shadow-md" data-sr-id="1">
+      <h4 class="font-bold">HTML</h4>
+      <div class="w-full max-w-[240px] mt-4">
+        <progress class="progress progress-accent w-full" value="98" max="100"></progress>
       </div>
-      <div class="w-full max-w-[1000px] px-8 md:px-10 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-8">
-        <div class="skill-card flex flex-col items-center justify-center p-6 rounded-md shadow-md" data-sr-id="1">
-          <h4 class="font-bold">HTML</h4>
-          <div class="w-full max-w-[60px] text-center py-5">HTML is one of my strongest skills</div>
-        </div>
-        <div class="skill-card flex flex-col items-center justify-center p-6 rounded-md shadow-md" data-sr-id="2">
-          <h4 class="font-bold">CSS</h4>
-          <div class="w-full max-w-[60px] text-center py-5">CSS allows me to design beautiful websites</div>
-        </div>
-        <div class="skill-card flex flex-col items-center justify-center p-6 rounded-md shadow-md" data-sr-id="3">
-          <h4 class="font-bold">JavaScript</h4>
-          <div class="w-full max-w-[60px] text-center py-5">JavaScript makes my websites interactive</div>
-        </div>
-        <div class="skill-card flex flex-col items-center justify-center p-6 rounded-md shadow-md" data-sr-id="4">
-          <h4 class="font-bold">Tailwind</h4>
-          <div class="w-full max-w-[60px] text-center py-5">Tailwind makes my websites responsive</div>
-        </div>
+    </div>
+    <div class="skill-card flex flex-col items-center justify-center p-6 rounded-md shadow-md" data-sr-id="2">
+      <h4 class="font-bold">CSS</h4>
+      <div class="w-full max-w-[240px] mt-4">
+        <progress class="progress progress-accent w-full" value="90" max="100"></progress>
       </div>
-    </section>
+    </div>
+    <div class="skill-card flex flex-col items-center justify-center p-6 rounded-md shadow-md" data-sr-id="3">
+      <h4 class="font-bold">JavaScript</h4>
+      <div class="w-full max-w-[240px] mt-4">
+        <progress class="progress progress-accent w-full" value="80" max="100"></progress>
+      </div>
+    </div>
+    <div class="skill-card flex flex-col items-center justify-center p-6 rounded-md shadow-md" data-sr-id="4">
+      <h4 class="font-bold">Flutter</h4>
+      <div class="w-full max-w-[240px] mt-4">
+        <progress class="progress progress-accent w-full" value="60" max="100"></progress>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer class="w-full px-8 md:px-10 mx-auto">
-      <p class="text-center text-gray-500">© 2024 Colt Digital. All rights reserved.</p>
-    </footer>
+
+<section class="py-16 text-left" id="projects">
+  <div class="w-full max-w-[1000px] px-8 md:px-10 mx-auto">
+    <h3 class="text-3xl font-semibold">Projects</h3>
+    <p class="text-lg mt-4">Check out some of the projects I've worked on!</p>
+  </div>
+  <div class="w-full max-w-[1000px] px-8 md:px-10 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-8">
+    <div class="project-card flex flex-col items-center justify-center p-6 rounded-md shadow-md" data-sr-id="5">
+      <h4 class="font-bold">YourFit</h4>
+      <p>An abandoned fitness app that I worked on.</p>
+    </div>
+    <div class="project-card flex flex-col items-center justify-center p-6 rounded-md shadow-md" data-sr-id="6">
+      <h4 class="font-bold">AutoShop</h4>
+      <p>An AI tool that is coming in 2025 somtime. It can fetch product info, search reddit for buying advice, find manuals and much more!</p>
+    </div>
+    <div class="project-card flex flex-col items-center justify-center p-6 rounded-md shadow-md" data-sr-id="7">
+      <h4 class="font-bold">Secret project</h4>
+      <p>NOT YET REVEALED</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 text-left" id="experience">
+  <div class="w-full max-w-[1000px] px-8 md:px-10 mx-auto">
+    <h3 class="text-3xl font-semibold">Experience</h3>
+    <p class="text-lg mt-4">Here are the highlights:</p>
+  </div>
+  <div class="w-full max-w-[1000px] px-8 md:px-10 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10 mt-8">
+    <div class="experience-card flex flex-col items-center justify-center p-6 rounded-md shadow-md" data-sr-id="8">
+      <h4 class="font-bold">Student</h4>
+      <p>CodeRVA regional high school</p>
+    </div>
+    <div class="experience-card flex flex-col items-center justify-center p-6 rounded-md shadow-md" data-sr-id="9">
+      <h4 class="font-bold">Freelancer</h4>
+      <p>2024-Current</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 text-center" id="contact">
+  <div class="w-full max-w-[1000px] px-8 md:px-10 mx-auto">
+    <h3 class="text-3xl font-semibold">Contact</h3>
+    <p class="text-lg mt-4">Feel free to reach out to me!</p>
+  </div>
+  <div class="text-center mt-8">
+    <a href="mailto:coltnovak09@gmail.com" class="btn btn-primary">Contact me!</a>
   </div>
 
-  <script>
-    ScrollReveal().reveal('.skill-card', {
-      delay: 200,
-      origin: 'bottom',
-      distance: '50px',
-      duration: 800
-    });
-  </script>
 </body>
 </html>

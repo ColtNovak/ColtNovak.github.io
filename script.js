@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sr.reveal('.section', { interval: 300 }); 
 });
- const sr = ScrollReveal({
+const sr = ScrollReveal({
       origin: 'bottom',
       distance: '50px',
       duration: 1000,
