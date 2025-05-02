@@ -39,5 +39,4 @@
   [data-aos="fade-down"] { transform: translateY(-15px); }
   [data-aos="fade-up"] { transform: translateY(15px); }
   [data-aos="fade-right"], [data-aos="fade-left"] { transform: translateX(0); }
-}    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-
+}
