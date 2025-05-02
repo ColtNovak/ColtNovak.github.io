@@ -16,11 +16,12 @@
 
 </head>
   
-<body class="bg-base-200 cursor-none">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+<body class="overflow-x-hidden">
+  <main class="overflow-x-hidden"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
 
   <div class="custom-cursor"></div>
-<div class="fixed bottom-6 left-1/2 -translate-x-1/2 transform z-50">
+  <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-[95vw] max-w-[400px]">
+
   <div class="flex items-center justify-center h-20 px-6 bg-base-300 rounded-full shadow-xl shadow-primary/10 space-x-6 border border-base-100/20">
     <a href="#home" class="group relative btn btn-ghost btn-circle hover:scale-110 transition-transform duration-300">
       <div class="relative">
@@ -255,7 +256,7 @@
     </div>
 </section>
 
- <section id="about" class="py-20 px-4 bg-base-100">
+<section id="about" class="py-20 px-4 bg-base-100">
     <div class="container mx-auto max-w-4xl text-center">
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12"
             data-aos="fade-down"
@@ -276,9 +277,10 @@
              data-aos-delay="300">
             <div class="card-body">
                 <div class="space-y-4">
-                    <div class="flex flex-col gap-4" x-data="{ open: false }">
+                    <div x-data="{ open: false }" class="flex flex-col gap-4">
                         <div class="flex items-center gap-4 p-4 bg-base-300 rounded-box hover:bg-base-100 transition-all cursor-pointer"
                              @click="open = !open"
+                             @touchstart.passive="open = !open"
                              data-aos="fade-down"
                              data-aos-delay="400">
                             <div class="bg-primary/20 p-3 rounded-full">
@@ -291,80 +293,83 @@
                                 <p class="font-bold">Colt Novak</p>
                             </div>
                         </div>
-                        <div class="overflow-hidden transition-all duration-300"
-                             x-bind:style="'max-height: ' + (open ? '100px' : '0')">
+                        <div x-collapse
+                             x-show="open"
+                             class="overflow-hidden transition-all duration-300 origin-top">
                             <div class="p-4 bg-base-300 rounded-box">
                                 <p class="text-sm">Pronunciation: <span class="font-medium">"Kohlt No-vak"</span></p>
                             </div>
                         </div>
                     </div>
 
-                   <div class="flex flex-col gap-4" x-data="{ open: false, step: 1 }">
-    <div class="flex items-center gap-4 p-4 bg-base-300 rounded-box hover:bg-base-100 transition-all cursor-pointer"
-         @click="open = !open"
-         data-aos="fade-down"
-         data-aos-delay="500">
-        <div class="bg-secondary/20 p-3 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-        </div>
-        <div>
-            <p class="text-sm opacity-75">Email</p>
-            <p class="font-bold">colton.novak@students.coderva.org</p>
-        </div>
-    </div>
+                    <div x-data="{ open: false, step: 1 }" class="flex flex-col gap-4">
+                        <div class="flex items-center gap-4 p-4 bg-base-300 rounded-box hover:bg-base-100 transition-all cursor-pointer"
+                             @click="open = !open"
+                             @touchstart.passive="open = !open"
+                             data-aos="fade-down"
+                             data-aos-delay="500">
+                            <div class="bg-secondary/20 p-3 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm opacity-75">Email</p>
+                                <p class="font-bold">colton.novak@students.coderva.org</p>
+                            </div>
+                        </div>
+                        <div x-collapse
+                             x-show="open"
+                             class="overflow-hidden transition-all duration-300 origin-top">
+                            <form action="https://formspree.io/f/xrbqenjg" 
+                                  method="POST"
+                                  class="flex flex-col gap-4 p-4 bg-base-300 rounded-box">
+                                <input type="hidden" name="_replyto" value="colton.novak@students.coderva.org">
+                                
+                                <div x-show="step === 1">
+                                    <input type="email" 
+                                           name="email"
+                                           placeholder="Your email address (optional)" 
+                                           class="input input-bordered w-full mb-4"
+                                           required>
+                                    <input type="text" 
+                                           name="subject"
+                                           placeholder="Subject" 
+                                           class="input input-bordered w-full"
+                                           required>
+                                    <button type="button" 
+                                            class="btn btn-primary w-full mt-4"
+                                            @click="step = 2">
+                                        Next →
+                                    </button>
+                                </div>
 
-    <div class="overflow-hidden transition-all duration-300"
-         x-bind:style="'max-height: ' + (open ? (step === 1 ? '200px' : '320px') : '0')">
-        <form action="https://formspree.io/f/xrbqenjg" 
-              method="POST"
-              class="flex flex-col gap-4 p-4 bg-base-300 rounded-box">
-            <input type="hidden" name="_replyto" value="colton.novak@students.coderva.org">
-            
-            <div x-show="step === 1">
-                <input type="email" 
-                       name="email"
-                       placeholder="Your email address (optional)" 
-                       class="input input-bordered w-full mb-4"
-                       required>
-                <input type="text" 
-                       name="subject"
-                       placeholder="Subject" 
-                       class="input input-bordered w-full"
-                       required>
-                <button type="button" 
-                        class="btn btn-primary w-full mt-4"
-                        @click="step = 2">
-                    Next →
-                </button>
-            </div>
-
-            <div x-show="step === 2" x-collapse>
-                <textarea name="message"
-                          class="textarea textarea-bordered w-full h-32" 
-                          placeholder="Your message..."
-                          required></textarea>
-                <div class="flex gap-4 mt-4">
-                    <button type="button" 
-                            class="btn btn-ghost flex-1"
-                            @click="step = 1">
-                        ← Back
-                    </button>
-                    <button type="submit" 
-                            class="btn btn-primary flex-1">
-                        Send
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
+                                <div x-show="step === 2" x-collapse>
+                                    <textarea name="message"
+                                              class="textarea textarea-bordered w-full h-32" 
+                                              placeholder="Your message..."
+                                              required></textarea>
+                                    <div class="flex gap-4 mt-4">
+                                        <button type="button" 
+                                                class="btn btn-ghost flex-1"
+                                                @click="step = 1">
+                                            ← Back
+                                        </button>
+                                        <button type="submit" 
+                                                class="btn btn-primary flex-1">
+                                            Send
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 
                     <div class="grid md:grid-cols-2 gap-4">
-                        <div class="flex flex-col gap-4" x-data="{ open: false }">
+                        <div x-data="{ open: false }" class="flex flex-col gap-4">
                             <div class="flex items-center gap-4 p-4 bg-base-300 rounded-box hover:bg-base-100 transition-all cursor-pointer"
                                  @click="open = !open"
+                                 @touchstart.passive="open = !open"
                                  data-aos="fade-right"
                                  data-aos-delay="600">
                                 <div class="bg-accent/20 p-3 rounded-full">
@@ -377,17 +382,19 @@
                                     <p class="font-bold">16</p>
                                 </div>
                             </div>
-                            <div class="overflow-hidden transition-all duration-300"
-                                 x-bind:style="'max-height: ' + (open ? '100px' : '0')">
+                            <div x-collapse
+                                 x-show="open"
+                                 class="overflow-hidden transition-all duration-300 origin-top">
                                 <div class="p-4 bg-base-300 rounded-box">
                                     <p class="text-sm">Birthday: <span class="font-medium">April 27, 2009</span></p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="flex flex-col gap-4" x-data="{ open: false }">
+                        <div x-data="{ open: false }" class="flex flex-col gap-4">
                             <div class="flex items-center gap-4 p-4 bg-base-300 rounded-box hover:bg-base-100 transition-all cursor-pointer"
                                  @click="open = !open"
+                                 @touchstart.passive="open = !open"
                                  data-aos="fade-left"
                                  data-aos-delay="700">
                                 <div class="bg-info/20 p-3 rounded-full">
@@ -401,11 +408,12 @@
                                     <p class="font-bold">Richmond, VA</p>
                                 </div>
                             </div>
-                            <div class="overflow-hidden transition-all duration-300"
-                                 x-bind:style="'max-height: ' + (open ? '100px' : '0')">
+                            <div x-collapse
+                                 x-show="open"
+                                 class="overflow-hidden transition-all duration-300 origin-top">
                                 <div class="p-4 bg-base-300 rounded-box">
                                     <p class="text-sm">I attend: <span class="font-medium">CodeRVA regional high school</span></p>
-                                    <p class="text-xs opacity-75 mt-1">(Fun fact: people from 15 different counties go to my school) </p>
+                                    <p class="text-xs opacity-75 mt-1">(Fun fact: people from 15 different counties go to my school)</p>
                                 </div>
                             </div>
                         </div>
@@ -413,9 +421,10 @@
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
 
 <footer class="footer p-10 bg-base-100 border-t border-base-300/20 pb-24 md:pb-16">
   <div class="container mx-auto max-w-6xl">
