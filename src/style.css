@@ -1,1 +1,43 @@
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-highlight {
+  animation: highlight 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes highlight {
+  0% { width: 0; opacity: 0.3; }
+  100% { width: 100%; opacity: 0.7; }
+}
+
+.custom-cursor {
+  @apply fixed w-[50px] h-[50px] border-4 border-[hsl(var(--p))] rounded-full pointer-events-none z-[9999] mix-blend-difference;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out, width 0.2s, height 0.2s, border-color 0.2s;
+}
+
+.custom-cursor.hover {
+  @apply w-[40px] h-[40px] border-[hsl(var(--a))] border-[1px];
+}
+
+@media (max-width: 768px) {
+  [x-bind\:style] { 
+    max-height: none !important; 
+    @apply overflow-visible;
+  }
+  
+  .card-body {
+    @apply p-4 break-words;
+  }
+
+  [data-aos="fade-down"] { transform: translateY(-15px); }
+  [data-aos="fade-up"] { transform: translateY(15px); }
+  [data-aos="fade-right"], [data-aos="fade-left"] { transform: translateX(0); }
+}    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 
