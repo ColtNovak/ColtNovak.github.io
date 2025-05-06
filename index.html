@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html data-theme="dark" lang="en">
+<html data-theme="mic"lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colt Novak - Portfolio</title>
-    
+ 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -17,6 +16,7 @@
 </head>
   
 <body class="overflow-x-hidden">
+  
   <main class="overflow-x-hidden"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
 
   <div class="custom-cursor"></div>
@@ -85,12 +85,14 @@
                 <div class="w-64 h-64 bg-primary/20 rounded-full absolute -inset-4 blur-2xl"></div>
                 <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?cs=srgb&dl=pexels-luis-gomes-166706-546819.jpg&fm=jpg" class="w-64 h-64 rounded-full shadow-2xl border-4 border-primary/20 hover:border-primary transition-all" />
             </div>
+   
+
             <div class="text-center lg:text-left max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
                 <h1 class="font-bold text-4xl md:text-5xl lg:text-7xl leading-tight">
                     Developer &<br>
                     <span class="relative inline-block z-10">
                         <span class="absolute inset-x-0 bottom-0.5 h-4 bg-gradient-to-r from-primary/30 to-accent/50 animate-highlight"></span>
-                        <span class="relative text-primary">Open Source</span>
+                        <span class="relative text-accent">Open Source</span>
                     </span> Enthusiast
                 </h1>
                 <p class="py-6 opacity-90 text-lg md:text-xl transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]">
@@ -105,64 +107,91 @@
     <div class="container mx-auto max-w-6xl">
         <div class="text-center mb-16" data-aos="fade-down">
             <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 relative inline-block">
-                <span class="relative z-10">Technical skills</span>
+                <span class="relative z-10">Technical Skills</span>
                 <span class="absolute inset-x-0 bottom-0 h-3 bg-gradient-to-r from-primary/30 to-accent/50 rounded-full animate-highlight"></span>
             </h2>
         </div>
 
-        <div class="card bg-base-200 shadow-xl" data-aos="fade-up">
-            <div class="card-body">
-                <div class="space-y-6">
-                    <div class="flex flex-col md:flex-row items-center gap-6 p-6 bg-base-300 rounded-box hover:bg-base-100 transition-all group">
-                        <div class="bg-primary/20 p-4 rounded-full w-24 h-24 flex items-center justify-center shrink-0">
-                            <img src="https://cdn-icons-png.flaticon.com/512/9364/9364669.png" class="w-16 h-16 object-contain" />
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-2xl font-bold mb-2">Web Development</h3>
-                            <p class="opacity-90 mb-4">I am skilled in HTML, Tailwind CSS, and JavaScript</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="badge badge-primary badge-lg">HTML</span>
-                                <span class="badge badge-primary badge-lg">CSS</span>
-                                <span class="badge badge-primary badge-lg">JavaScript</span>
-                            </div>
-                        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
+            <div class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                <div class="pulse-icon bg-primary/20 p-4 rounded-2xl w-max mb-4">
+                    <img src="https://cdn-icons-png.flaticon.com/512/9364/9364669.png" 
+                         class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Web Development</h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-primary/10 transition-colors">
+                        <div class="text-primary font-bold">HTML5</div>
+                        <div class="text-sm opacity-80">Semantic Markup</div>
                     </div>
-
-                    
-                    <div class="flex flex-col md:flex-row items-center gap-6 p-6 bg-base-300 rounded-box hover:bg-base-100 transition-all group">
-                        <div class="bg-secondary/20 p-4 rounded-full w-24 h-24 flex items-center justify-center shrink-0">
-                            <img src="https://cdn-icons-png.flaticon.com/512/13092/13092250.png" class="w-16 h-16 object-contain" />
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-2xl font-bold mb-2">Systems Programming</h3>
-                            <p class="opacity-90 mb-4">Currently developing an operating system,and have knowledge in Rust</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="badge badge-secondary badge-lg">Rust</span>
-                                <span class="badge badge-secondary badge-lg">C#</span>
-                                <span class="badge badge-secondary badge-lg">OS Dev</span>
-                            </div>
-                        </div>
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-primary/10 transition-colors">
+                        <div class="text-primary font-bold">CSS3</div>
+                        <div class="text-sm opacity-80">Modern Layouts</div>
                     </div>
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-primary/10 transition-colors">
+                        <div class="text-primary font-bold">JavaScript</div>
+                        <div class="text-sm opacity-80">ES6+ Features</div>
+                    </div>
+                   <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-primary/10 transition-colors">
+                        <div class="text-primary font-bold">Tailwind</div>
+                        <div class="text-sm opacity-80">Advanced CSS frameworks</div>
+                    </div>
+                </div>
+            </div>
 
-                    <div class="flex flex-col md:flex-row items-center gap-6 p-6 bg-base-300 rounded-box hover:bg-base-100 transition-all group">
-                        <div class="bg-accent/20 p-4 rounded-full w-24 h-24 flex items-center justify-center shrink-0">
-                            <img src="https://cdn-icons-png.flaticon.com/512/518/518713.png" class="w-16 h-16 object-contain" />
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-2xl font-bold mb-2">Linux</h3>
-                            <p class="opacity-90 mb-4">I have an understanding of Linux systems and Bash.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="badge badge-accent badge-lg">Bash</span>
-                                <span class="badge badge-accent badge-lg">Kernel</span>
-                                <span class="badge badge-accent badge-lg">SysAdmin</span>
-                            </div>
-                        </div>
+            <div class="group relative bg-base-200 p-6 rounded-[2rem] hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                <div class="pulse-icon bg-secondary/20 p-4 rounded-2xl w-max mb-4">
+                    <img src="https://cdn-icons-png.flaticon.com/512/13092/13092250.png" 
+                         class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Systems Programming</h3>
+                <div class="flex flex-col gap-3">
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-secondary/10 transition-colors">
+                        <div class="text-secondary font-bold">Rust</div>
+                        <div class="text-sm opacity-80">Memory Safety</div>
+                    </div>
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-secondary/10 transition-colors">
+                        <div class="text-secondary font-bold">C#</div>
+                        <div class="text-sm opacity-80">.NET Ecosystem</div>
+                    </div>
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-secondary/10 transition-colors">
+                        <div class="text-secondary font-bold">OS Dev</div>
+                        <div class="text-sm opacity-80">Kernel Programming</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative bg-base-200 p-6 rounded-[30px] hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                <div class="pulse-icon bg-accent/20 p-4 rounded-2xl w-max mb-4">
+                    <img src="https://cdn-icons-png.flaticon.com/512/518/518713.png" 
+                         class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Linux</h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-accent/10 transition-colors">
+                        <div class="text-accent font-bold">Bash</div>
+                        <div class="text-sm opacity-80">Shell</div>
+                    </div>
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-accent/10 transition-colors">
+                        <div class="text-accent font-bold">Kernel</div>
+                        <div class="text-sm opacity-80">System Internals</div>
+                    </div>
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-accent/10 transition-colors">
+                        <div class="text-accent font-bold">SysAdmin</div>
+                        <div class="text-sm opacity-80">System Management</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+ 
+</style>
 
 <section id="projects" class="py-20 px-4 bg-base-100">
     <div class="container mx-auto max-w-6xl">
@@ -174,6 +203,7 @@
         </div>
 
         <div class="card bg-base-200 shadow-xl" data-aos="fade-up">
+          
             <div class="card-body p-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div class="space-y-8">
@@ -276,54 +306,44 @@
              data-aos-duration="1000"
              data-aos-delay="300">
             <div class="card-body">
-                <div class="space-y-4">
-                    <div x-data="{ open: false }" class="flex flex-col gap-4">
-                        <div class="flex items-center gap-4 p-4 bg-base-300 rounded-box hover:bg-base-100 transition-all cursor-pointer"
-                             @click="open = !open"
-                             @touchstart.passive="open = !open"
-                             data-aos="fade-down"
-                             data-aos-delay="400">
-                            <div class="bg-primary/20 p-3 rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="grid gap-4">
+                    <div x-data="{ open: false }" class="skill-card bg-base-300 p-4 rounded-xl hover:bg-primary/10 transition-colors">
+                        <div class="flex items-center gap-4 cursor-pointer" @click="open = !open">
+                            <div class="bg-primary/20 p-3 rounded-full hover:animate-pulse">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="pulse-iconh-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                                 </svg>
                             </div>
                             <div>
-                                <p class="text-sm opacity-75">Name</p>
-                                <p class="font-bold">Colt Novak</p>
+                                <div class="text-primary font-bold">Colt Novak</div>
+                                <div class="text-sm opacity-80">Name</div>
                             </div>
                         </div>
-                        <div x-collapse
-                             x-show="open"
-                             class="overflow-hidden transition-all duration-300 origin-top">
-                            <div class="p-4 bg-base-300 rounded-box">
+                        <div x-collapse x-show="open" class="mt-2">
+                            <div class="pt-2 border-t border-base-100">
                                 <p class="text-sm">Pronunciation: <span class="font-medium">"Kohlt No-vak"</span></p>
                             </div>
                         </div>
                     </div>
 
-                    <div x-data="{ open: false, step: 1 }" class="flex flex-col gap-4">
-                        <div class="flex items-center gap-4 p-4 bg-base-300 rounded-box hover:bg-base-100 transition-all cursor-pointer"
-                             @click="open = !open"
-                             @touchstart.passive="open = !open"
-                             data-aos="fade-down"
-                             data-aos-delay="500">
-                            <div class="bg-secondary/20 p-3 rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div x-data="{ open: false, step: 1 }" class="skill-card bg-base-300 p-4 rounded-xl hover:bg-secondary/10 transition-colors">
+                        <div class="flex items-center gap-4 cursor-pointer" @click="open = !open">
+                            <div class="bg-secondary/20 p-3 rounded-full hover:animate-pulse">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="pulse-icon h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                 </svg>
                             </div>
                             <div>
-                                <p class="text-sm opacity-75">Email</p>
-                                <p class="font-bold">colton.novak@students.coderva.org</p>
+                                <div class="text-secondary font-bold">colton.novak@students.coderva.org</div>
+                                <div class="text-sm opacity-80">Email</div>
                             </div>
                         </div>
-                        <div x-collapse
+                         <div x-collapse
                              x-show="open"
-                             class="overflow-hidden transition-all duration-300 origin-top">
+                             class="overflow-hidden transition-all  duration-300 origin-top">
                             <form action="https://formspree.io/f/xrbqenjg" 
                                   method="POST"
-                                  class="flex flex-col gap-4 p-4 bg-base-300 rounded-box">
+                                  class="flex flex-col gap-4 p-4 bg-transparent rounded-box">
                                 <input type="hidden" name="_replyto" value="colton.novak@students.coderva.org">
                                 
                                 <div x-show="step === 1">
@@ -364,56 +384,45 @@
                             </form>
                         </div>
                     </div>
+                    </div>
 
                     <div class="grid md:grid-cols-2 gap-4">
-                        <div x-data="{ open: false }" class="flex flex-col gap-4">
-                            <div class="flex items-center gap-4 p-4 bg-base-300 rounded-box hover:bg-base-100 transition-all cursor-pointer"
-                                 @click="open = !open"
-                                 @touchstart.passive="open = !open"
-                                 data-aos="fade-right"
-                                 data-aos-delay="600">
-                                <div class="bg-accent/20 p-3 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div x-data="{ open: false }" class="skill-card bg-base-300 p-4 rounded-xl hover:bg-accent/10 transition-colors">
+                            <div class="flex items-center gap-4 cursor-pointer" @click="open = !open">
+                                <div class="bg-accent/20 p-3 rounded-full hover:animate-pulse">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="pulse-icon h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
                                     </svg>
                                 </div>
                                 <div>
-                                    <p class="text-sm opacity-75">Age</p>
-                                    <p class="font-bold">16</p>
+                                    <div class="text-accent font-bold">16</div>
+                                    <div class="text-sm opacity-80">Age</div>
                                 </div>
                             </div>
-                            <div x-collapse
-                                 x-show="open"
-                                 class="overflow-hidden transition-all duration-300 origin-top">
-                                <div class="p-4 bg-base-300 rounded-box">
+                            <div x-collapse x-show="open" class="mt-2">
+                                <div class="pt-2 border-t border-base-100">
                                     <p class="text-sm">Birthday: <span class="font-medium">April 27, 2009</span></p>
                                 </div>
                             </div>
                         </div>
 
-                        <div x-data="{ open: false }" class="flex flex-col gap-4">
-                            <div class="flex items-center gap-4 p-4 bg-base-300 rounded-box hover:bg-base-100 transition-all cursor-pointer"
-                                 @click="open = !open"
-                                 @touchstart.passive="open = !open"
-                                 data-aos="fade-left"
-                                 data-aos-delay="700">
-                                <div class="bg-info/20 p-3 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-info" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div x-data="{ open: false }" class="skill-card bg-base-300 p-4 rounded-xl hover:bg-info/10 transition-colors">
+                            <div class="flex items-center gap-4 cursor-pointer" @click="open = !open">
+                                <div class="bg-info/20 p-3 rounded-full hover:animate-pulse">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="pulse-icon h-6 w-6 text-info" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                                     </svg>
                                 </div>
                                 <div>
-                                    <p class="text-sm opacity-75">Location</p>
-                                    <p class="font-bold">Richmond, VA</p>
+                                    <div class="text-info font-bold">Richmond, VA</div>
+                                    <div class="text-sm opacity-80">Location</div>
                                 </div>
                             </div>
-                            <div x-collapse
-                                 x-show="open"
-                                 class="overflow-hidden transition-all duration-300 origin-top">
-                                <div class="p-4 bg-base-300 rounded-box">
-                                    <p class="text-sm">I attend: <span class="font-medium">CodeRVA regional high school</span></p>
-                                    <p class="text-xs opacity-75 mt-1">(Fun fact: people from 15 different counties go to my school)</p>
+                            <div x-collapse x-show="open" class="mt-2">
+                                <div class="pt-2 border-t border-base-100">
+                                    <p class="text-sm">School: <span class="font-medium">CodeRVA regional high school</span></p>
+                                    <p class="text-xs opacity-75 mt-1">(15+ counties represented)</p>
                                 </div>
                             </div>
                         </div>
