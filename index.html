@@ -307,10 +307,13 @@
              data-aos-delay="300">
             <div class="card-body">
                 <div class="grid gap-4">
-                    <div x-data="{ open: false }" class="skill-card bg-base-300 p-4 rounded-xl hover:bg-primary/10 transition-colors">
+                    <div x-data="{ open: false }" 
+                         class="skill-card bg-base-300 p-4 rounded-xl hover:bg-primary/10 transition-colors"
+                         data-aos="fade-down"
+                         data-aos-delay="400">
                         <div class="flex items-center gap-4 cursor-pointer" @click="open = !open">
                             <div class="bg-primary/20 p-3 rounded-full hover:animate-pulse">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="pulse-iconh-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                                 </svg>
                             </div>
@@ -326,10 +329,13 @@
                         </div>
                     </div>
 
-                    <div x-data="{ open: false, step: 1 }" class="skill-card bg-base-300 p-4 rounded-xl hover:bg-secondary/10 transition-colors">
+                    <div x-data="{ open: false, step: 1 }" 
+                         class="skill-card bg-base-300 p-4 rounded-xl hover:bg-secondary/10 transition-colors"
+                         data-aos="fade-down"
+                         data-aos-delay="500">
                         <div class="flex items-center gap-4 cursor-pointer" @click="open = !open">
                             <div class="bg-secondary/20 p-3 rounded-full hover:animate-pulse">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="pulse-icon h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                 </svg>
                             </div>
@@ -338,9 +344,7 @@
                                 <div class="text-sm opacity-80">Email</div>
                             </div>
                         </div>
-                         <div x-collapse
-                             x-show="open"
-                             class="overflow-hidden transition-all  duration-300 origin-top">
+                        <div x-collapse x-show="open" class="mt-2">
                             <form action="https://formspree.io/f/xrbqenjg" 
                                   method="POST"
                                   class="flex flex-col gap-4 p-4 bg-transparent rounded-box">
@@ -350,12 +354,12 @@
                                     <input type="email" 
                                            name="email"
                                            placeholder="Your email address (optional)" 
-                                           class="input input-bordered w-full mb-4"
+                                           class="input bg-transparent input-bordered w-full mb-4"
                                            required>
                                     <input type="text" 
                                            name="subject"
                                            placeholder="Subject" 
-                                           class="input input-bordered w-full"
+                                           class="input bg-transparent input-bordered w-full"
                                            required>
                                     <button type="button" 
                                             class="btn btn-primary w-full mt-4"
@@ -366,7 +370,7 @@
 
                                 <div x-show="step === 2" x-collapse>
                                     <textarea name="message"
-                                              class="textarea textarea-bordered w-full h-32" 
+                                              class="textarea bg-transparent textarea-bordered w-full h-32" 
                                               placeholder="Your message..."
                                               required></textarea>
                                     <div class="flex gap-4 mt-4">
@@ -384,13 +388,15 @@
                             </form>
                         </div>
                     </div>
-                    </div>
 
                     <div class="grid md:grid-cols-2 gap-4">
-                        <div x-data="{ open: false }" class="skill-card bg-base-300 p-4 rounded-xl hover:bg-accent/10 transition-colors">
+                        <div x-data="{ open: false }" 
+                             class="skill-card bg-base-300 p-4 rounded-xl hover:bg-accent/10 transition-colors"
+                             data-aos="fade-right"
+                             data-aos-delay="600">
                             <div class="flex items-center gap-4 cursor-pointer" @click="open = !open">
                                 <div class="bg-accent/20 p-3 rounded-full hover:animate-pulse">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="pulse-icon h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
                                     </svg>
                                 </div>
@@ -406,10 +412,13 @@
                             </div>
                         </div>
 
-                        <div x-data="{ open: false }" class="skill-card bg-base-300 p-4 rounded-xl hover:bg-info/10 transition-colors">
+                        <div x-data="{ open: false }" 
+                             class="skill-card bg-base-300 p-4 rounded-xl hover:bg-info/10 transition-colors"
+                             data-aos="fade-left"
+                             data-aos-delay="700">
                             <div class="flex items-center gap-4 cursor-pointer" @click="open = !open">
                                 <div class="bg-info/20 p-3 rounded-full hover:animate-pulse">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="pulse-icon h-6 w-6 text-info" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-info" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                                     </svg>
