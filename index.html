@@ -3,7 +3,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colt Novak - Portfolio</title>
- 
+   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+   <style>
+    [x-cloak] { display: none !important; }
+  </style>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -193,8 +197,14 @@
  
 </style>
 
-<section id="projects" class="py-20 px-4 bg-base-100">
-    <div class="container mx-auto max-w-6xl">
+<section id="projects" class="py-20 px-4 bg-base-100" x-data="{ 
+    showModal: false, 
+    previewUrl: '',
+    init() {
+        this.showModal = false;
+        this.previewUrl = '';
+    }
+}">    <div class="container mx-auto max-w-6xl">
         <div class="text-center mb-16" data-aos="fade-down">
             <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 relative inline-block">
                 <span class="relative z-10">Featured Projects</span>
