@@ -248,7 +248,7 @@
                             <div class="flex gap-4">
                                 <button @click="showModal = true; previewUrl = 'https://potential-space-doodle-jjq596rwxpr4fj45-7681.app.github.dev/'"
                                         class="btn btn-primary btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                     </svg>
@@ -342,8 +342,7 @@
                 x-transition:leave-start="opacity-100"
                 x-transition:leave-end="opacity-0"
                 @click.away="showModal = false">
-                <div class="bg-base-100 rounded-box w-full max-w-4xl max-h-[90vh] flex flex-col shadow-2xl"
-                    x-transition:enter="transition ease-out duration-300"
+<div class="bg-base-100 rounded-box w-full max-w-[95vw] h-[90vh] flex flex-col shadow-2xl"
                     x-transition:enter-start="opacity-0 transform scale-95"
                     x-transition:enter-end="opacity-100 transform scale-100"
                     x-transition:leave="transition ease-in duration-200"
@@ -356,11 +355,10 @@
                         </button>
                     </div>
                     <div class="flex-1 overflow-hidden">
-                        <iframe :src="previewUrl" 
-                                class="w-full h-full bg-base-200"
-                                frameborder="0"
-                                loading="lazy"></iframe>
-                    </div>
+        <iframe :src="previewUrl" 
+                class="w-full h-full bg-base-200"
+                frameborder="0"
+                loading="lazy"></iframe>
                 </div>
             </div>
         </div>
