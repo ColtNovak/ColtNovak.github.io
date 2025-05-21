@@ -449,7 +449,7 @@ document.querySelectorAll('.project-scroll-right').forEach(btn => {
                         </div>
                     </div>
 
-                    <div x-data="{ open: false, step: 1, formData: { email: '', subject: '', message: '' }}" 
+                    <div x-data="{ open: false, step: 1 }" 
                          class="skill-card bg-base-300 p-4 rounded-xl hover:bg-secondary/10 transition-colors"
                          data-aos="fade-down"
                          data-aos-delay="500">
@@ -465,32 +465,25 @@ document.querySelectorAll('.project-scroll-right').forEach(btn => {
                             </div>
                         </div>
                         <div x-collapse x-show="open" class="mt-2">
-                            <form action="https://formspree.io/f/xrbqenjg" 
-                                  method="POST"
+                            <form action="https://formspree.io/f/xrbqenjg" method="POST"
                                   class="flex flex-col gap-4 p-4 bg-transparent rounded-box">
-                                <input type="hidden" name="_replyto" x-model="formData.email">
-                                <input type="hidden" name="subject" x-model="formData.subject">
-                                <input type="hidden" name="message" x-model="formData.message">
-                                
                                 <div x-show="step === 1">
-                                    <input type="email" 
-                                           x-model="formData.email"
-                                           placeholder="Your email address (optional)" 
+                                    <input type="email" name="_replyto"
+                                           placeholder="Your email address (required)" 
                                            class="input bg-transparent input-bordered w-full mb-4">
-                                    <input type="text" 
-                                           x-model="formData.subject"
+                                    <input type="text" name="subject"
                                            placeholder="Subject" 
                                            class="input bg-transparent input-bordered w-full"
                                            required>
                                     <button type="button" 
                                             class="btn btn-primary w-full mt-4"
-                                            @click="if(formData.subject) { step = 2 }">
+                                            @click="step = 2">
                                         Next →
                                     </button>
                                 </div>
 
                                 <div x-show="step === 2" x-collapse>
-                                    <textarea x-model="formData.message"
+                                    <textarea name="message"
                                               class="textarea bg-transparent textarea-bordered w-full h-32" 
                                               placeholder="Your message..."
                                               required></textarea>
@@ -562,6 +555,7 @@ document.querySelectorAll('.project-scroll-right').forEach(btn => {
         </div>
     </div>
 </section>
+>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
 
