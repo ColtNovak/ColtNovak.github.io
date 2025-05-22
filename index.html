@@ -406,14 +406,14 @@ document.querySelectorAll('.project-scroll-right').forEach(btn => {
     }
 }
 </style>
-<section id="about" class="py-20 px-4 bg-base-100">
+<section id="about" class="py-20 px-4 bg-gray-900">
     <div class="container mx-auto max-w-4xl text-center">
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12"
             data-aos="fade-down"
             data-aos-duration="800">
             About and Contact
         </h2>
-        <p class="text-lead mb-12 opacity-90"
+        <p class="text-lg mb-12 opacity-90"
            data-aos="fade-down"
            data-aos-delay="200">
             Need something? Just contact me. (click on any of the cards for more details)
@@ -421,62 +421,80 @@ document.querySelectorAll('.project-scroll-right').forEach(btn => {
     </div>
 
     <div class="container mx-auto max-w-4xl">
-        <div class="card bg-base-200 shadow-xl"
+        <div class="bg-gray-800 shadow-2xl rounded-2xl overflow-hidden"
              data-aos="fade-up"
              data-aos-duration="1000"
              data-aos-delay="300">
-            <div class="card-body">
-                <div class="grid gap-4">
+            <div class="p-8">
+                <div class="grid gap-6">
                     <div x-data="{ open: false }" 
-                         class="skill-card bg-base-300 p-4 rounded-xl hover:bg-primary/10 transition-colors"
+                         class="bg-gray-700 p-6 rounded-xl hover:bg-blue-900/30 transition-all duration-300 cursor-pointer group border-2 border-transparent hover:border-blue-500/50 shadow-lg hover:shadow-xl transform hover:scale-105"
                          data-aos="fade-down"
-                         data-aos-delay="400">
-                        <div class="flex items-center gap-4 cursor-pointer" @click="open = !open">
-                            <div class="bg-primary/20 p-3 rounded-full hover:animate-pulse">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                         data-aos-delay="400"
+                         @click="open = !open">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-500/20 p-4 rounded-full group-hover:bg-blue-500/30 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-blue-400 font-bold text-lg">Colt Novak</div>
+                                    <div class="text-sm opacity-70">Name</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs bg-blue-500/20 px-3 py-1 rounded-full text-blue-300">Click to expand</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-400 transform transition-transform group-hover:rotate-180" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                                 </svg>
                             </div>
-                            <div>
-                                <div class="text-primary font-bold">Colt Novak</div>
-                                <div class="text-sm opacity-80">Name</div>
-                            </div>
                         </div>
-                        <div x-collapse x-show="open" class="mt-2">
-                            <div class="pt-2 border-t border-base-100">
-                                <p class="text-sm">Pronunciation: <span class="font-medium">"Kohlt No-vak"</span></p>
+                        <div x-show="open" x-collapse class="mt-4">
+                            <div class="pt-4 border-t border-gray-600">
+                                <p class="text-sm">Pronunciation: <span class="font-medium text-blue-300">"Kohlt No-vak"</span></p>
                             </div>
                         </div>
                     </div>
 
                     <div x-data="{ open: false, step: 1 }" 
-                         class="skill-card bg-base-300 p-4 rounded-xl hover:bg-secondary/10 transition-colors"
+                         class="bg-gray-700 p-6 rounded-xl hover:bg-green-900/30 transition-all duration-300 cursor-pointer group border-2 border-transparent hover:border-green-500/50 shadow-lg hover:shadow-xl transform hover:scale-105"
                          data-aos="fade-down"
-                         data-aos-delay="500">
-                        <div class="flex items-center gap-4 cursor-pointer" @click="open = !open">
-                            <div class="bg-secondary/20 p-3 rounded-full hover:animate-pulse">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                         data-aos-delay="500"
+                         @click="open = !open">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-green-500/20 p-4 rounded-full group-hover:bg-green-500/30 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-green-400 font-bold text-lg">colton.novak@students.coderva.org</div>
+                                    <div class="text-sm opacity-70">Email</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs bg-green-500/20 px-3 py-1 rounded-full text-green-300">Click to expand</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400 transform transition-transform group-hover:rotate-180" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                                 </svg>
                             </div>
-                            <div>
-                                <div class="text-secondary font-bold">colton.novak@students.coderva.org</div>
-                                <div class="text-sm opacity-80">Email</div>
-                            </div>
                         </div>
-                        <div x-collapse x-show="open" class="mt-2">
+                        <div x-show="open" x-collapse class="mt-4" @click.stop>
                             <form action="https://formspree.io/f/xrbqenjg" method="POST"
-                                  class="flex flex-col gap-4 p-4 bg-transparent rounded-box">
+                                  class="flex flex-col gap-4 p-6 bg-gray-800 rounded-lg border border-gray-600">
                                 <div x-show="step === 1">
                                     <input type="email" name="_replyto"
                                            placeholder="Your email address (required)" 
-                                           class="input bg-transparent input-bordered w-full mb-4">
+                                           class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20 mb-4">
                                     <input type="text" name="subject"
                                            placeholder="Subject" 
-                                           class="input bg-transparent input-bordered w-full"
+                                           class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20"
                                            required>
                                     <button type="button" 
-                                            class="btn btn-primary w-full mt-4"
+                                            class="w-full mt-4 px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors"
                                             @click="step = 2">
                                         Next →
                                     </button>
@@ -484,17 +502,17 @@ document.querySelectorAll('.project-scroll-right').forEach(btn => {
 
                                 <div x-show="step === 2" x-collapse>
                                     <textarea name="message"
-                                              class="textarea bg-transparent textarea-bordered w-full h-32" 
+                                              class="w-full h-32 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20 resize-none" 
                                               placeholder="Your message..."
                                               required></textarea>
                                     <div class="flex gap-4 mt-4">
                                         <button type="button" 
-                                                class="btn btn-ghost flex-1"
+                                                class="flex-1 px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors"
                                                 @click="step = 1">
                                             ← Back
                                         </button>
                                         <button type="submit" 
-                                                class="btn btn-primary flex-1">
+                                                class="flex-1 px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors">
                                             Send
                                         </button>
                                     </div>
@@ -503,48 +521,66 @@ document.querySelectorAll('.project-scroll-right').forEach(btn => {
                         </div>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-4">
+                    <div class="grid md:grid-cols-2 gap-6">
                         <div x-data="{ open: false }" 
-                             class="skill-card bg-base-300 p-4 rounded-xl hover:bg-accent/10 transition-colors"
+                             class="bg-gray-700 p-6 rounded-xl hover:bg-purple-900/30 transition-all duration-300 cursor-pointer group border-2 border-transparent hover:border-purple-500/50 shadow-lg hover:shadow-xl transform hover:scale-105"
                              data-aos="fade-right"
-                             data-aos-delay="600">
-                            <div class="flex items-center gap-4 cursor-pointer" @click="open = !open">
-                                <div class="bg-accent/20 p-3 rounded-full hover:animate-pulse">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
+                             data-aos-delay="600"
+                             @click="open = !open">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-4">
+                                    <div class="bg-purple-500/20 p-4 rounded-full group-hover:bg-purple-500/30 transition-colors">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="text-purple-400 font-bold text-lg">16</div>
+                                        <div class="text-sm opacity-70">Age</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs bg-purple-500/20 px-2 py-1 rounded-full text-purple-300 hidden sm:block">Click</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400 transform transition-transform group-hover:rotate-180" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                                     </svg>
                                 </div>
-                                <div>
-                                    <div class="text-accent font-bold">16</div>
-                                    <div class="text-sm opacity-80">Age</div>
-                                </div>
                             </div>
-                            <div x-collapse x-show="open" class="mt-2">
-                                <div class="pt-2 border-t border-base-100">
-                                    <p class="text-sm">Birthday: <span class="font-medium">April 27, 2009</span></p>
+                            <div x-show="open" x-collapse class="mt-4">
+                                <div class="pt-4 border-t border-gray-600">
+                                    <p class="text-sm">Birthday: <span class="font-medium text-purple-300">April 27, 2009</span></p>
                                 </div>
                             </div>
                         </div>
 
                         <div x-data="{ open: false }" 
-                             class="skill-card bg-base-300 p-4 rounded-xl hover:bg-info/10 transition-colors"
+                             class="bg-gray-700 p-6 rounded-xl hover:bg-cyan-900/30 transition-all duration-300 cursor-pointer group border-2 border-transparent hover:border-cyan-500/50 shadow-lg hover:shadow-xl transform hover:scale-105"
                              data-aos="fade-left"
-                             data-aos-delay="700">
-                            <div class="flex items-center gap-4 cursor-pointer" @click="open = !open">
-                                <div class="bg-info/20 p-3 rounded-full hover:animate-pulse">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-info" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                             data-aos-delay="700"
+                             @click="open = !open">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-4">
+                                    <div class="bg-cyan-500/20 p-4 rounded-full group-hover:bg-cyan-500/30 transition-colors">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="text-cyan-400 font-bold text-lg">Richmond, VA</div>
+                                        <div class="text-sm opacity-70">Location</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs bg-cyan-500/20 px-2 py-1 rounded-full text-cyan-300 hidden sm:block">Click</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-cyan-400 transform transition-transform group-hover:rotate-180" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                                     </svg>
                                 </div>
-                                <div>
-                                    <div class="text-info font-bold">Richmond, VA</div>
-                                    <div class="text-sm opacity-80">Location</div>
-                                </div>
                             </div>
-                            <div x-collapse x-show="open" class="mt-2">
-                                <div class="pt-2 border-t border-base-100">
-                                    <p class="text-sm">School: <span class="font-medium">CodeRVA regional high school</span></p>
+                            <div x-show="open" x-collapse class="mt-4">
+                                <div class="pt-4 border-t border-gray-600">
+                                    <p class="text-sm">School: <span class="font-medium text-cyan-300">CodeRVA regional high school</span></p>
                                     <p class="text-xs opacity-75 mt-1">(15+ counties represented)</p>
                                 </div>
                             </div>
@@ -555,7 +591,6 @@ document.querySelectorAll('.project-scroll-right').forEach(btn => {
         </div>
     </div>
 </section>
->
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
 
