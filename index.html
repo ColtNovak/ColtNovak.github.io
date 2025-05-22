@@ -480,20 +480,7 @@
     50% { opacity: 0.7 }
 }
 </style>
-document.querySelectorAll('.project-scroll-left').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const container = btn.closest('.relative').querySelector('.overflow-x-auto');
-        container.scrollBy({ left: -300, behavior: 'smooth' });
-    });
-});
 
-document.querySelectorAll('.project-scroll-right').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const container = btn.closest('.relative').querySelector('.overflow-x-auto');
-        container.scrollBy({ left: 300, behavior: 'smooth' });
-    });
-});
-</script>
 
 <style>
 .scrollbar-hide {
