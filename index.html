@@ -199,11 +199,14 @@
 <section id="projects" class="py-20 px-4 bg-base-100" x-data="{ 
     showModal: false, 
     previewUrl: '',
+    showMore: false,
     init() {
         this.showModal = false;
         this.previewUrl = '';
+        this.showMore = false;
     }
-}">    <div class="container mx-auto max-w-6xl">
+}">
+    <div class="container mx-auto max-w-6xl">
         <div class="text-center mb-16" data-aos="fade-down">
             <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 relative inline-block">
                 <span class="relative z-10">Featured Projects</span>
@@ -211,125 +214,227 @@
             </h2>
         </div>
 
-        <div class="relative" x-data="{ showModal: false, previewUrl: '' }">
-            <div class="absolute inset-y-0 -right-6 flex items-center">
-                <button class="btn btn-circle btn-sm hover:scale-110 transition-transform project-scroll-right">
-                    →
-                </button>
-            </div>
-            <div class="absolute inset-y-0 -left-6 flex items-center">
-                <button class="btn btn-circle btn-sm hover:scale-110 transition-transform project-scroll-left">
-                    ←
-                </button>
-            </div>
-
-            <div class="overflow-x-auto scrollbar-hide pb-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl w-full">
-                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
-                        <div class="relative">
-                            <div class="pulse-icon bg-primary/20 p-4 rounded-2xl w-max mb-4">
-                                <img src="https://cdn-icons-png.flaticon.com/512/9364/9364669.png" 
-                                    class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4">Heavim</h3>
-                            <p class="opacity-90 mb-4">Advanced catpuccin mocha themed catpuccin mocha config</p>
-                            <div class="relative aspect-video overflow-hidden rounded-box mb-6">
-                                <img src="https://placehold.co/600x400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                                <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent flex items-end p-4">
-                                    <div class="flex gap-2">
-                                        <span class="badge badge-primary">Lua</span>
-                                        <span class="badge badge-secondary">Lazy</span>
-                                        <span class="badge badge-accent">Snacks.nvim</span>
-                                    </div>
+        <div class="relative">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl w-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                    <div class="relative">
+                        <div class="pulse-icon bg-primary/20 p-4 rounded-2xl w-max mb-4">
+                            <img src="https://cdn-icons-png.flaticon.com/512/9364/9364669.png" 
+                                class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Heavim</h3>
+                        <p class="opacity-90 mb-4">Advanced catpuccin mocha themed catpuccin mocha config</p>
+                        <div class="relative aspect-video overflow-hidden rounded-box mb-6">
+                            <img src="https://placehold.co/600x400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent flex items-end p-4">
+                                <div class="flex gap-2">
+                                    <span class="badge badge-primary">Lua</span>
+                                    <span class="badge badge-secondary">Lazy</span>
+                                    <span class="badge badge-accent">Snacks.nvim</span>
                                 </div>
-                            </div>
-                            <div class="flex gap-4">
-                                <button @click="showModal = true; previewUrl = 'https://eeeeeee.fly.dev/'"
-                                        class="btn btn-primary btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                    </svg>
-                                    Preview
-                                </button>
-                                <a href="#/" class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
-                                    Details →
-                                </a>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl w-full">
-                        <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
-                        <div class="relative">
-                            <div class="pulse-icon bg-secondary/20 p-4 rounded-2xl w-max mb-4">
-                                <img src="https://cdn-icons-png.flaticon.com/512/13092/13092250.png" 
-                                    class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4">Rmath Engine</h3>
-                            <p class="opacity-90 mb-4">Advanced TUI calculator engine with symbolic mathematics support</p>
-                            <div class="relative aspect-video overflow-hidden rounded-box mb-6">
-                                <img src="https://placehold.co/600x400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                                <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent flex items-end p-4">
-                                    <div class="flex gap-2">
-                                        <span class="badge badge-secondary">Rust</span>
-                                        <span class="badge badge-primary">CLI</span>
-                                        <span class="badge badge-accent">Math</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex gap-4">
-                                <button @click="showModal = true; previewUrl = 'https://rmath.fly.dev'"
-                                        class="btn btn-secondary btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                    </svg>
-                                    Preview
-                                </button>
-                                <a href="#/" class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
-                                    Details →
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl w-full">
-                        <div class="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
-                        <div class="relative">
-                            <div class="pulse-icon bg-accent/20 p-4 rounded-2xl w-max mb-4">
-                                <img src="https://cdn-icons-png.flaticon.com/512/518/518713.png" 
-                                    class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4">YourFit AI</h3>
-                            <p class="opacity-90 mb-4">Intelligent fitness assistant with AI-powered recommendations</p>
-                            <div class="relative aspect-video overflow-hidden rounded-box mb-6">
-                                <img src="https://placehold.co/600x400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                                <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent flex items-end p-4">
-                                    <div class="flex gap-2">
-                                        <span class="badge badge-accent">Flutter</span>
-                                        <span class="badge badge-primary">Dart</span>
-                                        <span class="badge badge-secondary">AI</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex gap-4">
-                                <button @click="showModal = true; previewUrl = 'https://yourfit.demo'"
-                                        class="btn btn-accent btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                    </svg>
-                                    Preview
-                                </button>
-                                <a href="#/" class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
-                                    Details →
-                                </a>
-                            </div>
+                        <div class="flex gap-4">
+                            <button @click="showModal = true; previewUrl = 'https://eeeeeee.fly.dev/'"
+                                    class="btn btn-primary btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                            <a href="#/" class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                Details →
+                            </a>
                         </div>
                     </div>
                 </div>
+
+                <div class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl w-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                    <div class="relative">
+                        <div class="pulse-icon bg-secondary/20 p-4 rounded-2xl w-max mb-4">
+                            <img src="https://cdn-icons-png.flaticon.com/512/13092/13092250.png" 
+                                class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Rmath Engine</h3>
+                        <p class="opacity-90 mb-4">Advanced TUI calculator engine with symbolic mathematics support</p>
+                        <div class="relative aspect-video overflow-hidden rounded-box mb-6">
+                            <img src="https://placehold.co/600x400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent flex items-end p-4">
+                                <div class="flex gap-2">
+                                    <span class="badge badge-secondary">Rust</span>
+                                    <span class="badge badge-primary">CLI</span>
+                                    <span class="badge badge-accent">Math</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <button @click="showModal = true; previewUrl = 'https://rmath.fly.dev'"
+                                    class="btn btn-secondary btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                            <a href="#/" class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                Details →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl w-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                    <div class="relative">
+                        <div class="pulse-icon bg-accent/20 p-4 rounded-2xl w-max mb-4">
+                            <img src="https://cdn-icons-png.flaticon.com/512/518/518713.png" 
+                                class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">YourFit AI</h3>
+                        <p class="opacity-90 mb-4">Intelligent fitness assistant with AI-powered recommendations</p>
+                        <div class="relative aspect-video overflow-hidden rounded-box mb-6">
+                            <img src="https://placehold.co/600x400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent flex items-end p-4">
+                                <div class="flex gap-2">
+                                    <span class="badge badge-accent">Flutter</span>
+                                    <span class="badge badge-primary">Dart</span>
+                                    <span class="badge badge-secondary">AI</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <button @click="showModal = true; previewUrl = 'https://yourfit.demo'"
+                                    class="btn btn-accent btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                            <a href="#/" class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                Details →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div x-show="showMore" x-collapse class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl w-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-info/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                    <div class="relative">
+                        <div class="pulse-icon bg-info/20 p-4 rounded-2xl w-max mb-4">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2621/2621336.png" 
+                                class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Portfolio Site</h3>
+                        <p class="opacity-90 mb-4">Modern responsive portfolio built with DaisyUI and Alpine.js</p>
+                        <div class="relative aspect-video overflow-hidden rounded-box mb-6">
+                            <img src="https://placehold.co/600x400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent flex items-end p-4">
+                                <div class="flex gap-2">
+                                    <span class="badge badge-info">HTML</span>
+                                    <span class="badge badge-primary">Tailwind</span>
+                                    <span class="badge badge-secondary">Alpine.js</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <button @click="showModal = true; previewUrl = '#'"
+                                    class="btn btn-info btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                            <a href="#/" class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                Details →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div x-show="showMore" x-collapse class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl w-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-warning/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                    <div class="relative">
+                        <div class="pulse-icon bg-warning/20 p-4 rounded-2xl w-max mb-4">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3659/3659898.png" 
+                                class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">CLI Tools Suite</h3>
+                        <p class="opacity-90 mb-4">Collection of productivity CLI tools written in various languages</p>
+                        <div class="relative aspect-video overflow-hidden rounded-box mb-6">
+                            <img src="https://placehold.co/600x400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent flex items-end p-4">
+                                <div class="flex gap-2">
+                                    <span class="badge badge-warning">Python</span>
+                                    <span class="badge badge-secondary">Rust</span>
+                                    <span class="badge badge-accent">Go</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <button @click="showModal = true; previewUrl = 'https://github.com'"
+                                    class="btn btn-warning btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                            <a href="#/" class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                Details →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div x-show="showMore" x-collapse class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl w-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-success/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                    <div class="relative">
+                        <div class="pulse-icon bg-success/20 p-4 rounded-2xl w-max mb-4">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2721/2721297.png" 
+                                class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Data Viz Dashboard</h3>
+                        <p class="opacity-90 mb-4">Interactive data visualization dashboard with real-time updates</p>
+                        <div class="relative aspect-video overflow-hidden rounded-box mb-6">
+                            <img src="https://placehold.co/600x400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent flex items-end p-4">
+                                <div class="flex gap-2">
+                                    <span class="badge badge-success">React</span>
+                                    <span class="badge badge-info">D3.js</span>
+                                    <span class="badge badge-warning">Node.js</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <button @click="showModal = true; previewUrl = 'https://dataviz.demo'"
+                                    class="btn btn-success btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                            <a href="#/" class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                Details →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-12">
+                <button @click="showMore = !showMore" 
+                        class="btn btn-outline btn-lg gap-2 hover:scale-105 transition-all duration-300 group">
+                    <span x-text="showMore ? 'Show Less' : 'Show More Projects'"></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" :class="{ 'rotate-180': showMore }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
             </div>
 
             <div x-show="showModal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
@@ -341,7 +446,7 @@
                 x-transition:leave-start="opacity-100"
                 x-transition:leave-end="opacity-0"
                 @click.away="showModal = false">
-<div class="bg-base-100 rounded-box w-full max-w-[95vw] h-[90vh] flex flex-col shadow-2xl"
+                <div class="bg-base-100 rounded-box w-full max-w-[95vw] h-[90vh] flex flex-col shadow-2xl"
                     x-transition:enter-start="opacity-0 transform scale-95"
                     x-transition:enter-end="opacity-100 transform scale-100"
                     x-transition:leave="transition ease-in duration-200"
@@ -354,16 +459,27 @@
                         </button>
                     </div>
                     <div class="flex-1 overflow-hidden">
-        <iframe :src="previewUrl" 
-                class="w-full h-full bg-base-200"
-                frameborder="0"
-                loading="lazy"></iframe>
+                        <iframe :src="previewUrl" 
+                                class="w-full h-full bg-base-200"
+                                frameborder="0"
+                                loading="lazy"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<script>
+
+<style>
+.pulse-icon {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1 }
+    50% { opacity: 0.7 }
+}
+</style>
 document.querySelectorAll('.project-scroll-left').forEach(btn => {
     btn.addEventListener('click', () => {
         const container = btn.closest('.relative').querySelector('.overflow-x-auto');
