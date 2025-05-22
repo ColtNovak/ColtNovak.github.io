@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body class="min-h-screen bg-base-100">
+
+    <section class="py-20 px-4 bg-base-100" x-data="projectsApp()">
+        <div class="container mx-auto max-w-7xl">
+          <div class="mb-8">
+    <a href="index.html" class="btn btn-ghost gap-2 hover:-translate-x-1 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Back to Home
+    </a>
+</div>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 relative inline-block">
+                    <span class="relative z-10">My Projects</span>
+                    <span class="absolute inset-x-0 bottom-0 h-4 bg-gradient-to-r from-secondary/30 to-primary/50 rounded-full animate-highlight"></span>
+                </h1>
+                <p class="text-lg opacity-80 max-w-2xl mx-auto">
+                    Here's some things I've made previously. Most of these should have live demos and information.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 mb-12" data-aos="fade-up" data-aos-delay="100">
+                <button @click="selectedCategory = 'all'" 
+                        :class="selectedCategory === 'all' ? 'btn-primary' : 'btn-ghost'"
+                        class="btn btn-sm">All</button>
+                <template x-for="category in categories" :key="category">
+                    <button @click="selectedCategory = category" 
+                            :class="selectedCategory === category ? 'btn-primary' : 'btn-ghost'"
+                            class="btn btn-sm capitalize" 
+                            x-text="category"></button>
+                </template>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <template x-for="(project, index) in filteredProjects" :key="project.id">
+                    <div class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl w-full"
+                         :data-aos="'fade-up'"
+                         :data-aos-delay="index * 100">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"
+                             :class="`from-${project.color}/10`"></div>
+                        <div class="relative">
+                            <div class="pulse-icon p-4 rounded-2xl w-max mb-4"
+                                 :class="`bg-${project.color}/20`">
+                                <img :src="project.icon" 
+                                     class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" 
+                                     :alt="project.title" />
+                            </div>
+                            
+                            <h3 class="text-2xl font-bold mb-4" x-text="project.title"></h3>
+                            <p class="opacity-90 mb-4 line-clamp-3" x-text="project.description"></p>
+                            
+                            <div class="relative aspect-video overflow-hidden rounded-box mb-6">
+                                <img :src="project.image" 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                                     :alt="project.title" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent flex items-end p-4">
+                                    <div class="flex gap-2 flex-wrap">
+                                        <template x-for="tech in project.technologies" :key="tech">
+                                            <span class="badge badge-sm" 
+                                                  :class="`badge-${project.color}`"
+                                                  x-text="tech"></span>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-2">
+                                <template x-if="project.previewUrl">
+                                    <button @click="openPreview(project.previewUrl)"
+                                            class="btn btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform"
+                                            :class="`btn-${project.color}`">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                        </svg>
+                                        Preview
+                                    </button>
+                                </template>
+                                <template x-if="project.githubUrl">
+                                    <a :href="project.githubUrl" 
+                                       target="_blank"
+                                       class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                        <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                        Code
+                                    </a>
+                                </template>
+                                <template x-if="!project.previewUrl && !project.githubUrl">
+                                    <button class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                        Details →
+                                    </button>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+
+            <div x-show="filteredProjects.length === 0" class="text-center py-16">
+                <div class="text-6xl opacity-30 mb-4">🔍</div>
+                <h3 class="text-2xl font-bold mb-2">No projects found</h3>
+                <p class="opacity-70">Try selecting a different category</p>
+            </div>
+        </div>
+
+        <div x-show="showModal" 
+             class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
+             x-cloak
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0"
+             x-transition:enter-end="opacity-100"
+             x-transition:leave="transition ease-in duration-200"
+             x-transition:leave-start="opacity-100"
+             x-transition:leave-end="opacity-0"
+             @click.away="showModal = false">
+            <div class="bg-base-100 rounded-box w-full max-w-[95vw] h-[90vh] flex flex-col shadow-2xl"
+                 x-transition:enter-start="opacity-0 transform scale-95"
+                 x-transition:enter-end="opacity-100 transform scale-100"
+                 x-transition:leave="transition ease-in duration-200"
+                 x-transition:leave-start="opacity-100 transform scale-100"
+                 x-transition:leave-end="opacity-0 transform scale-95">
+                <div class="flex justify-between items-center p-4 border-b border-base-300">
+                    <h3 class="text-xl font-bold">Live Preview</h3>
+                    <button @click="showModal = false" class="btn btn-ghost btn-sm">
+                        ✕
+                    </button>
+                </div>
+                <div class="flex-1 overflow-hidden">
+                    <template x-if="previewUrl === 'color-scheme'">
+                        <div class="p-6 grid grid-cols-2 md:grid-cols-4 gap-4 overflow-y-auto">
+                            <div class="h-20 rounded-lg flex items-center justify-center text-xs font-mono border border-base-300" style="background-color: #0C0E12; color: #D6C5B3;">
+                                Background<br>#0C0E12
+                            </div>
+                            <div class="h-20 rounded-lg flex items-center justify-center text-xs font-mono border border-base-300" style="background-color: #D6C5B3; color: #0C0E12;">
+                                Foreground<br>#D6C5B3
+                            </div>
+                            <div class="h-20 rounded-lg flex items-center justify-center text-xs font-mono border border-base-300" style="background-color: #FF4971; color: #0C0E12;">
+                                Accent<br>#FF4971
+                            </div>
+                            <div class="h-20 rounded-lg flex items-center justify-center text-xs font-mono border border-base-300" style="background-color: #E87D3E; color: #0C0E12;">
+                                Selection<br>#E87D3E
+                            </div>
+                            <div class="h-20 rounded-lg flex items-center justify-center text-xs font-mono border border-base-300" style="background-color: #6FB58B; color: #0C0E12;">
+                                Green<br>#6FB58B
+                            </div>
+                            <div class="h-20 rounded-lg flex items-center justify-center text-xs font-mono border border-base-300" style="background-color: #4D8EDA; color: #0C0E12;">
+                                Blue<br>#4D8EDA
+                            </div>
+                            <div class="h-20 rounded-lg flex items-center justify-center text-xs font-mono border border-base-300" style="background-color: #B675BC; color: #0C0E12;">
+                                Magenta<br>#B675BC
+                            </div>
+                            <div class="h-20 rounded-lg flex items-center justify-center text-xs font-mono border border-base-300" style="background-color: #4BBDAF; color: #0C0E12;">
+                                Cyan<br>#4BBDAF
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="previewUrl !== 'color-scheme'">
+                        <iframe :src="previewUrl" class="w-full h-full bg-base-200" frameborder="0" loading="lazy"></iframe>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <script>
+    function projectsApp() {
+        return {
+            showModal: false,
+            previewUrl: '',
+            selectedCategory: 'all',
+            
+            projects: [
+                {
+                    id: 1,
+                    title: "lfetch",
+                    description: "an ultra fast system info fetching tool written in bash",
+                    category: "tools",
+                    color: "primary",
+                    icon: "https://cdn-icons-png.flaticon.com/512/6125/6125004.png",
+                    image: "https://i.imgur.com/TE9lQ2o.png",
+                    technologies: ["BASH", "Linux", "CLI"],
+                    previewUrl: "https://lfetch.fly.dev",
+                    githubUrl: "https://github.com/ColtNovak/lfetch"
+                },
+                {
+                    id: 2,
+                    title: "Portfolio Website",
+                    description: "This website",
+                    category: "web",
+                    color: "secondary",
+                    icon: "https://cdn-icons-png.flaticon.com/512/1006/1006771.png",
+                    image: "https://i.imgur.com/7qukj3m.png",
+                    technologies: ["HTML", "Tailwind", "Javascript"],
+                    previewUrl: "https://coltnovak.github.io",
+                    githubUrl: "https://github.com/ColtNovak/ColtNovak.github.io"
+                },
+                {
+                    id: 3,
+                    title: "Catpuccin Material",
+                    description: "A discord theme , catpuccin mocha coloring with material design",
+                    category: "design",
+                    color: "accent",
+                    icon: "https://cdn-icons-png.flaticon.com/512/2111/2111370.png",
+                    image: "https://i.imgur.com/FDgfacF.png",
+                    technologies: ["CSS", "Discord", "Theming"],
+                    previewUrl: "https://gibbu.github.io/ThemePreview/?file=https://cdn.jsdelivr.net/gh/ColtNovak/catpuccin-material@main/style.css",
+                    githubUrl: "https://github.com/ColtNovak/catpuccin-material"
+                },
+                {
+                    id: 4,
+                    title: "RaptorOS",
+                    description: "A work in progress OS built with COSMOS",
+                    category: "systems",
+                    color: "warning",
+                    icon: "https://cdn-icons-png.flaticon.com/512/518/518713.png",
+                    image: "/api/placeholder/600/400",
+                    technologies: ["C#", "COSMOS", "Kernel"],
+                    previewUrl: null,
+                    githubUrl: "https://github.com/kumja1/RaptorOS"
+                },
+                {
+                    id: 5,
+                    title: "Baker's Lawn Care",
+                    description: "A W.I.P website for a lawn care company.",
+                    category: "web",
+                    color: "success",
+                    icon: "https://cdn-icons-png.flaticon.com/512/284/284489.png",
+                    image: "/api/placeholder/600/400",
+                    technologies: ["HTML", "CSS", "JS"],
+                    previewUrl: "https://bakerslawncare.github.io",
+                    githubUrl: "https://github.com/bakerslawncare/bakerslawncare.github.io"
+                },
+                {
+                    id: 6,
+                    title: "Darkwave",
+                    description: "Hyprland dotfiles with a custom color scheme",
+                    category: "desktop",
+                    color: "error",
+                    icon: "https://cdn-icons-png.flaticon.com/512/6125/6125004.png",
+                    image: "/api/placeholder/600/400",
+                    technologies: ["Hyprland", "Wayland", "BASH"],
+                    previewUrl: "color-scheme",
+                    githubUrl: "https://github.com/ColtNovak/Darkwave"
+                }
+            ],
+
+            get categories() {
+                return [...new Set(this.projects.map(p => p.category))];
+            },
+
+            get filteredProjects() {
+                if (this.selectedCategory === 'all') {
+                    return this.projects;
+                }
+                return this.projects.filter(p => p.category === this.selectedCategory);
+            },
+
+            openPreview(url) {
+                this.previewUrl = url;
+                this.showModal = true;
+            },
+
+            init() {
+                AOS.init({
+                    duration: 600,
+                    once: true
+                });
+            }
+        }
+    }
+</script>
+    <style>
+        .pulse-icon {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1 }
+            50% { opacity: 0.7 }
+        }
+
+        @keyframes highlight {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+      
+
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        [x-cloak] { display: none !important; }
+    </style>
+</body>
+</html>
