@@ -1,746 +1,598 @@
-<!DOCTYPE html>
-<html data-theme="dark" lang="en">
-<head>
+<html data-theme="dark"lang="en">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Colt Novak - Full Stack Developer & Open Source Enthusiast | Portfolio</title>
-    <meta name="description" content="Colt Novak - 16-year-old full stack developer specializing in web development, Rust systems programming, and Linux. Richmond, VA based developer with mastery of HTML5, CSS3, JavaScript, and modern frameworks.">
-    <meta name="keywords" content="Colt Novak, full stack developer, web developer, Rust developer, open source developer, Richmond VA developer, HTML5, CSS3, JavaScript, Linux developer, systems programming, portfolio">
-    <meta name="author" content="Colt Novak">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <link rel="canonical" href="https://coltnovak.com/">
-    <link rel="alternate" href="https://colt.digital/" hreflang="en">
-    
-    <meta property="og:title" content="Colt Novak - Full Stack Developer & Open Source Enthusiast">
-    <meta property="og:description" content="16-year-old full stack developer from Richmond, VA specializing in web development, Rust systems programming, and Linux. Check out my portfolio and projects.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://coltnovak.com/">
-    <meta property="og:image" content="https://coltnovak.com/assets/colt-novak-developer.jpg">
-    <meta property="og:site_name" content="Colt Novak Portfolio">
-    <meta property="og:locale" content="en_US">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Colt Novak - Full Stack Developer & Open Source Enthusiast">
-    <meta name="twitter:description" content="16-year-old full stack developer from Richmond, VA specializing in web development, Rust systems programming, and Linux.">
-    <meta name="twitter:image" content="https://coltnovak.com/assets/colt-novak-developer.jpg">
-    <meta name="twitter:creator" content="@coltnovak">
-    
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Colt Novak",
-        "jobTitle": "Full Stack Developer",
-        "description": "16-year-old full stack developer specializing in web development, Rust systems programming, and Linux",
-        "url": "https://coltnovak.com",
-        "sameAs": [
-            "https://github.com/coltnovak",
-            "https://colt.digital"
-        ],
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Richmond",
-            "addressRegion": "VA",
-            "addressCountry": "US"
-        },
-        "email": "colton.novak@students.coderva.org",
-        "knowsAbout": [
-            "Web Development",
-            "Rust Programming",
-            "Systems Programming",
-            "Linux",
-            "JavaScript",
-            "HTML5",
-            "CSS3",
-            "Open Source Development"
-        ],
-        "alumniOf": {
-            "@type": "EducationalOrganization",
-            "name": "CodeRVA Regional High School"
-        }
-    }
-    </script>
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-    
-    <style>
-        [x-cloak] { display: none !important; }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        @keyframes highlight {
-            0% { width: 0%; }
-            100% { width: 100%; }
-        }
-        
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .animate-highlight {
-            animation: highlight 2s ease-in-out forwards;
-        }
-        
-        .custom-cursor {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            background: rgba(var(--primary), 0.3);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            mix-blend-mode: difference;
-        }
-        
-        .pulse-icon {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1 }
-            50% { opacity: 0.7 }
-        }
-        
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-        
-        @media (min-width: 768px) {
-            .grid-flow-col {
-                grid-flow: row !important;
-            }
-            .auto-cols-[minmax(300px,1fr)] {
-                grid-auto-columns: auto !important;
-            }
-        }
-    </style>
-    
+    <title>Colt Novak - Portfolio</title>
+   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+   <style>
+    [x-cloak] { display: none !important; }
+  </style>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="src/script.js"> </script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <link href="src/style.css" rel="stylesheet" type="text/css" />
+
 </head>
+  
 <body class="overflow-x-hidden">
-    <main class="overflow-x-hidden">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  
+  <main class="overflow-x-hidden"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
 
-        <div class="custom-cursor"></div>
-        
-        <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-[95vw] max-w-[400px]" role="navigation" aria-label="Main navigation">
-            <div class="flex items-center justify-center h-20 px-6 bg-base-300 rounded-full shadow-xl shadow-primary/10 space-x-6 border border-base-100/20">
-                <a href="#home" class="group relative btn btn-ghost btn-circle hover:scale-110 transition-transform duration-300" aria-label="Go to home section">
-                    <div class="relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-base-content group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                        </svg>
-                        <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 delay-75 w-max">
-                            <span class="relative z-10 block px-2">Home</span>
-                            <span class="absolute inset-0 -top-1 -z-10 h-8 bg-base-300 rounded-full scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-300 shadow-md border border-base-100/20 min-w-[calc(100%+1.5rem)] left-1/2 -translate-x-1/2"></span>
-                        </span>
-                    </div>
-                </a>
+  <div class="custom-cursor"></div>
+  <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-[95vw] max-w-[400px]">
 
-                <a href="#skills" class="group relative btn btn-ghost btn-circle hover:scale-110 transition-transform duration-300" aria-label="Go to skills section">
-                    <div class="relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-base-content group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 delay-75 w-max">
-                            <span class="relative z-10 block px-2">Skills</span>
-                            <span class="absolute inset-0 -top-1 -z-10 h-8 bg-base-300 rounded-full scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-300 shadow-md border border-base-100/20 min-w-[calc(100%+1.5rem)] left-1/2 -translate-x-1/2"></span>
-                        </span>
-                    </div>
-                </a>
+  <div class="flex items-center justify-center h-20 px-6 bg-base-300 rounded-full shadow-xl shadow-primary/10 space-x-6 border border-base-100/20">
+    <a href="#home" class="group relative btn btn-ghost btn-circle hover:scale-110 transition-transform duration-300">
+      <div class="relative">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-base-content group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+        <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 delay-75 w-max">
+          <span class="relative z-10 block px-2">Home</span>
+          <span class="absolute inset-0 -top-1 -z-10 h-8 bg-base-300 rounded-full scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-300 shadow-md border border-base-100/20 min-w-[calc(100%+1.5rem)] left-1/2 -translate-x-1/2"></span>
+        </span>
+      </div>
+    </a>
 
-                <div class="relative -top-8 hover:-top-9 transition-all duration-300">
-                    <div class="ring-4 ring-base-100 rounded-full p-1 bg-gradient-to-br from-primary/20 to-transparent hover:scale-105 transition-transform shadow-lg">
-                        <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?cs=srgb&dl=pexels-luis-gomes-166706-546819.jpg&fm=jpg" 
-                             class="w-16 h-16 rounded-full object-cover transform group-hover:rotate-12 transition-transform" 
-                             alt="Colt Novak - Full Stack Developer">
-                    </div>
-                </div>
+    <a href="#skills" class="group relative btn btn-ghost btn-circle hover:scale-110 transition-transform duration-300">
+      <div class="relative">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-base-content group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 delay-75 w-max">
+          <span class="relative z-10 block px-2">Skills</span>
+          <span class="absolute inset-0 -top-1 -z-10 h-8 bg-base-300 rounded-full scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-300 shadow-md border border-base-100/20 min-w-[calc(100%+1.5rem)] left-1/2 -translate-x-1/2"></span>
+        </span>
+      </div>
+    </a>
 
-                <a href="#projects" class="group relative btn btn-ghost btn-circle hover:scale-110 transition-transform duration-300" aria-label="Go to projects section">
-                    <div class="relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-base-content group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                        </svg>
-                        <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 delay-75 w-max">
-                            <span class="relative z-10 block px-2">Projects</span>
-                            <span class="absolute inset-0 -top-1 -z-10 h-8 bg-base-300 rounded-full scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-300 shadow-md border border-base-100/20 min-w-[calc(100%+1.5rem)] left-1/2 -translate-x-1/2"></span>
-                        </span>
-                    </div>
-                </a>
+    <div class="relative -top-8 hover:-top-9 transition-all duration-300">
+      <div class="ring-4 ring-base-100 rounded-full p-1 bg-gradient-to-br from-primary/20 to-transparent hover:scale-105 transition-transform shadow-lg">
+        <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?cs=srgb&dl=pexels-luis-gomes-166706-546819.jpg&fm=jpg" class="w-16 h-16 rounded-full object-cover transform group-hover:rotate-12 transition-transform">
+      </div>
+    </div>
 
-                <a href="#about" class="group relative btn btn-ghost btn-circle hover:scale-110 transition-transform duration-300" aria-label="Go to about section">
-                    <div class="relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-base-content group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
-                        <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 delay-75 w-max">
-                            <span class="relative z-10 block px-2">About</span>
-                            <span class="absolute inset-0 -top-1 -z-10 h-8 bg-base-300 rounded-full scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-300 shadow-md border border-base-100/20 min-w-[calc(100%+1.5rem)] left-1/2 -translate-x-1/2"></span>
-                        </span>
-                    </div>
-                </a>
+    <a href="#projects" class="group relative btn btn-ghost btn-circle hover:scale-110 transition-transform duration-300">
+      <div class="relative">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-base-content group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+        <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 delay-75 w-max">
+          <span class="relative z-10 block px-2">Projects</span>
+          <span class="absolute inset-0 -top-1 -z-10 h-8 bg-base-300 rounded-full scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-300 shadow-md border border-base-100/20 min-w-[calc(100%+1.5rem)] left-1/2 -translate-x-1/2"></span>
+        </span>
+      </div>
+    </a>
+
+    <a href="#about" class="group relative btn btn-ghost btn-circle hover:scale-110 transition-transform duration-300">
+      <div class="relative">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-base-content group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+        <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 delay-75 w-max">
+          <span class="relative z-10 block px-2">About</span>
+          <span class="absolute inset-0 -top-1 -z-10 h-8 bg-base-300 rounded-full scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-300 shadow-md border border-base-100/20 min-w-[calc(100%+1.5rem)] left-1/2 -translate-x-1/2"></span>
+        </span>
+      </div>
+    </a>
+  </div>
+</div>
+
+    <section class="hero min-h-screen px-4" id="home">
+        <div class="hero-content flex-col lg:flex-row-reverse gap-16">
+            <div class="floating relative animate-float" data-aos="fade-left" data-aos-duration="1000">
+                <div class="w-64 h-64 bg-primary/20 rounded-full absolute -inset-4 blur-2xl"></div>
+                <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?cs=srgb&dl=pexels-luis-gomes-166706-546819.jpg&fm=jpg" class="w-64 h-64 rounded-full shadow-2xl border-4 border-primary/20 hover:border-primary transition-all" />
             </div>
-        </nav>
+   
 
-        <section class="hero min-h-screen px-4" id="home">
-            <div class="hero-content flex-col lg:flex-row-reverse gap-16">
-                <div class="floating relative animate-float" data-aos="fade-left" data-aos-duration="1000">
-                    <div class="w-64 h-64 bg-primary/20 rounded-full absolute -inset-4 blur-2xl"></div>
-                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?cs=srgb&dl=pexels-luis-gomes-166706-546819.jpg&fm=jpg" 
-                         class="w-64 h-64 rounded-full shadow-2xl border-4 border-primary/20 hover:border-primary transition-all" 
-                         alt="Colt Novak - Full Stack Developer from Richmond, VA" />
+            <div class="text-center lg:text-left max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="font-bold text-4xl md:text-5xl lg:text-7xl leading-tight">
+                    Developer &<br>
+                    <span class="relative inline-block z-10">
+                        <span class="absolute inset-x-0 bottom-0.5 h-4 bg-gradient-to-r from-primary/30 to-accent/50 animate-highlight"></span>
+                        <span class="relative text-accent">Open Source</span>
+                    </span> Enthusiast
+                </h1>
+                <p class="py-6 opacity-90 text-lg md:text-xl transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]">
+                    My name is Colt Novak, let's get in touch.
+                </p>
+              
+            </div>
+        </div>
+    </section>
+
+<section class="py-20 px-4 bg-base-100" id="skills">
+    <div class="container mx-auto max-w-6xl">
+        <div class="text-center mb-16" data-aos="fade-down">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 relative inline-block">
+                <span class="relative z-10">Technical Skills</span>
+                <span class="absolute inset-x-0 bottom-0 h-3 bg-gradient-to-r from-primary/30 to-accent/50 rounded-full animate-highlight"></span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
+            <div class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                <div class="pulse-icon bg-primary/20 p-4 rounded-2xl w-max mb-4">
+                    <img src="https://cdn-icons-png.flaticon.com/512/9364/9364669.png" 
+                         class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
                 </div>
-
-                <div class="text-center lg:text-left max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
-                    <h1 class="font-bold text-4xl md:text-5xl lg:text-7xl leading-tight">
-               Full Stack Dev &<br>
-                        <span class="relative inline-block z-10">
-                            <span class="absolute inset-x-0 bottom-0.5 h-4 bg-gradient-to-r from-primary/30 to-accent/50 animate-highlight"></span>
-                            <span class="relative text-accent">Open Source</span>
-                        </span> Enthusiast
-                    </h1>
-                    <p class="py-6 opacity-90 text-lg md:text-xl transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]">
-                        Hi, I'm Colt Novak - a 16-year-old developer from Richmond, VA, specializing in web development, app development , and Linux. Let's get in touch.
-                    </p>
+                <h3 class="text-2xl font-bold mb-4">Web Development</h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-primary/10 transition-colors">
+                        <div class="text-primary font-bold">HTML5</div>
+                        <div class="text-sm opacity-80">Semantic Markup</div>
+                    </div>
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-primary/10 transition-colors">
+                        <div class="text-primary font-bold">CSS3</div>
+                        <div class="text-sm opacity-80">Modern Layouts</div>
+                    </div>
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-primary/10 transition-colors">
+                        <div class="text-primary font-bold">JavaScript</div>
+                        <div class="text-sm opacity-80">ES6+ Features</div>
+                    </div>
+                   <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-primary/10 transition-colors">
+                        <div class="text-primary font-bold">Tailwind</div>
+                        <div class="text-sm opacity-80">Advanced CSS frameworks</div>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section class="py-20 px-4 bg-base-100" id="skills">
-            <div class="container mx-auto max-w-6xl">
-                <div class="text-center mb-16" data-aos="fade-down">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 relative inline-block">
-                        <span class="relative z-10">Technical Skills & Expertise</span>
-                        <span class="absolute inset-x-0 bottom-0 h-3 bg-gradient-to-r from-primary/30 to-accent/50 rounded-full animate-highlight"></span>
-                    </h2>
-                    <p class="text-lg opacity-80 max-w-2xl mx-auto">
-                        Mastery in modern web development, systems programming, and Linux administration
-                    </p>
+            <div class="group relative bg-base-200 p-6 rounded-[2rem] hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                <div class="pulse-icon bg-secondary/20 p-4 rounded-2xl w-max mb-4">
+                    <img src="https://cdn-icons-png.flaticon.com/512/13092/13092250.png" 
+                         class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
                 </div>
+                <h3 class="text-2xl font-bold mb-4">Systems Programming</h3>
+                <div class="flex flex-col gap-3">
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-secondary/10 transition-colors">
+                        <div class="text-secondary font-bold">Rust</div>
+                        <div class="text-sm opacity-80">Memory Safety</div>
+                    </div>
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-secondary/10 transition-colors">
+                        <div class="text-secondary font-bold">C#</div>
+                        <div class="text-sm opacity-80">.NET Ecosystem</div>
+                    </div>
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-secondary/10 transition-colors">
+                        <div class="text-secondary font-bold">OS Dev</div>
+                        <div class="text-sm opacity-80">Kernel Programming</div>
+                    </div>
+                </div>
+            </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
-                    <article class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl">
-                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+            <div class="group relative bg-base-200 p-6 rounded-[30px] hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                <div class="pulse-icon bg-accent/20 p-4 rounded-2xl w-max mb-4">
+                    <img src="https://cdn-icons-png.flaticon.com/512/518/518713.png" 
+                         class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Linux</h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-accent/10 transition-colors">
+                        <div class="text-accent font-bold">Bash</div>
+                        <div class="text-sm opacity-80">Shell</div>
+                    </div>
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-accent/10 transition-colors">
+                        <div class="text-accent font-bold">Kernel</div>
+                        <div class="text-sm opacity-80">System Internals</div>
+                    </div>
+                    <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-accent/10 transition-colors">
+                        <div class="text-accent font-bold">SysAdmin</div>
+                        <div class="text-sm opacity-80">System Management</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+ 
+</style>
+<section id="projects" class="py-20 px-4 bg-base-100" x-data="{ 
+    showModal: false, 
+    previewUrl: '',
+    init() {
+        this.showModal = false;
+        this.previewUrl = '';
+    }
+}">
+    <div class="container mx-auto max-w-6xl">
+        <div class="text-center mb-16" data-aos="fade-down">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 relative inline-block">
+                <span class="relative z-10">Featured Projects</span>
+                <span class="absolute inset-x-0 bottom-0 h-3 bg-gradient-to-r from-secondary/30 to-primary/50 rounded-full animate-highlight"></span>
+            </h2>
+        </div>
+
+        <div class="relative">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl w-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                    <div class="relative">
                         <div class="pulse-icon bg-primary/20 p-4 rounded-2xl w-max mb-4">
                             <img src="https://cdn-icons-png.flaticon.com/512/9364/9364669.png" 
-                                 class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" 
-                                 alt="Web Development Icon" />
+                                class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Web Development</h3>
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-primary/10 transition-colors">
-                                <div class="text-primary font-bold">HTML5</div>
-                                <div class="text-sm opacity-80">Semantic Markup</div>
-                            </div>
-                            <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-primary/10 transition-colors">
-                                <div class="text-primary font-bold">CSS3</div>
-                                <div class="text-sm opacity-80">Modern Layouts</div>
-                            </div>
-                            <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-primary/10 transition-colors">
-                                <div class="text-primary font-bold">JavaScript</div>
-                                <div class="text-sm opacity-80">ES6+ Features</div>
-                            </div>
-                           <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-primary/10 transition-colors">
-                                <div class="text-primary font-bold">Tailwind</div>
-                                <div class="text-sm opacity-80">CSS Framework</div>
+                        <h3 class="text-2xl font-bold mb-4">Heavim</h3>
+                        <p class="opacity-90 mb-4">Advanced catpuccin mocha themed neovim config</p>
+                        <div class="relative aspect-video overflow-hidden rounded-box mb-6">
+                            <img src="https://placehold.co/600x400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent flex items-end p-4">
+                                <div class="flex gap-2">
+                                    <span class="badge badge-primary">Lua</span>
+                                    <span class="badge badge-secondary">Lazy</span>
+                                    <span class="badge badge-accent">Snacks.nvim</span>
+                                </div>
                             </div>
                         </div>
-                    </article>
+                        <div class="flex gap-4">
+                            <button @click="showModal = true; previewUrl = 'https://eeeeeee.fly.dev/'"
+                                    class="btn btn-primary btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                            <a href="https://github.com/username/heavim" target="_blank" class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-                    <article class="group relative bg-base-200 p-6 rounded-[2rem] hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl">
-                        <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                <div class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl w-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                    <div class="relative">
                         <div class="pulse-icon bg-secondary/20 p-4 rounded-2xl w-max mb-4">
                             <img src="https://cdn-icons-png.flaticon.com/512/13092/13092250.png" 
-                                 class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" 
-                                 alt="Systems Programming Icon" />
+                                class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Systems Programming</h3>
-                        <div class="flex flex-col gap-3">
-                            <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-secondary/10 transition-colors">
-                                <div class="text-secondary font-bold">Rust</div>
-                                <div class="text-sm opacity-80">Memory Safety</div>
-                            </div>
-                            <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-secondary/10 transition-colors">
-                                <div class="text-secondary font-bold">C#</div>
-                                <div class="text-sm opacity-80">.NET Ecosystem</div>
-                            </div>
-                            <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-secondary/10 transition-colors">
-                                <div class="text-secondary font-bold">OS Dev</div>
-                                <div class="text-sm opacity-80">Kernel Programming</div>
+                        <h3 class="text-2xl font-bold mb-4">Rmath Engine</h3>
+                        <p class="opacity-90 mb-4">Advanced TUI calculator engine with symbolic mathematics support</p>
+                        <div class="relative aspect-video overflow-hidden rounded-box mb-6">
+                            <img src="https://placehold.co/600x400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent flex items-end p-4">
+                                <div class="flex gap-2">
+                                    <span class="badge badge-secondary">Rust</span>
+                                    <span class="badge badge-primary">CLI</span>
+                                    <span class="badge badge-accent">Math</span>
+                                </div>
                             </div>
                         </div>
-                    </article>
+                        <div class="flex gap-4">
+                            <button @click="showModal = true; previewUrl = 'https://rmath.fly.dev'"
+                                    class="btn btn-secondary btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                            <a href="https://github.com/username/rmath" target="_blank" class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-                    <article class="group relative bg-base-200 p-6 rounded-[30px] hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl">
-                        <div class="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                <div class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl w-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
+                    <div class="relative">
                         <div class="pulse-icon bg-accent/20 p-4 rounded-2xl w-max mb-4">
                             <img src="https://cdn-icons-png.flaticon.com/512/518/518713.png" 
-                                 class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" 
-                                 alt="Linux Programming Icon" />
+                                class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" />
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Linux & System Administration</h3>
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-accent/10 transition-colors">
-                                <div class="text-accent font-bold">Bash</div>
-                                <div class="text-sm opacity-80">Shell Scripting</div>
-                            </div>
-                            <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-accent/10 transition-colors">
-                                <div class="text-accent font-bold">Kernel</div>
-                                <div class="text-sm opacity-80">System Internals</div>
-                            </div>
-                            <div class="skill-card bg-base-300 p-4 rounded-xl hover:bg-accent/10 transition-colors">
-                                <div class="text-accent font-bold">SysAdmin</div>
-                                <div class="text-sm opacity-80">Server Management</div>
+                        <h3 class="text-2xl font-bold mb-4">YourFit AI</h3>
+                        <p class="opacity-90 mb-4">Intelligent fitness assistant with AI-powered recommendations</p>
+                        <div class="relative aspect-video overflow-hidden rounded-box mb-6">
+                            <img src="https://placehold.co/600x400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent flex items-end p-4">
+                                <div class="flex gap-2">
+                                    <span class="badge badge-accent">Flutter</span>
+                                    <span class="badge badge-primary">Dart</span>
+                                    <span class="badge badge-secondary">AI</span>
+                                </div>
                             </div>
                         </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
- <section id="projects" class="py-20 px-4 bg-base-100" x-data="{ 
-            showModal: false, 
-            previewUrl: '',
-            init() {
-                this.showModal = false;
-                this.previewUrl = '';
-            }
-        }">
-            <div class="container mx-auto max-w-6xl">
-                <div class="text-center mb-16" data-aos="fade-down">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 relative inline-block">
-                        <span class="relative z-10">Featured Projects</span>
-                        <span class="absolute inset-x-0 bottom-0 h-3 bg-gradient-to-r from-secondary/30 to-primary/50 rounded-full animate-highlight"></span>
-                    </h2>
-                    <p class="text-lg opacity-90 mt-4">Innovative solutions built with modern technologies</p>
-                </div>
-
-                <div class="relative">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <article class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl w-full" data-aos="fade-up" data-aos-delay="100">
-                            <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
-                            <div class="relative">
-                                <div class="pulse-icon bg-primary/20 p-4 rounded-2xl w-max mb-4">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/9364/9364669.png" 
-                                        alt="Heavim Neovim Configuration Icon"
-                                        class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110" 
-                                        loading="lazy" />
-                                </div>
-                                <h3 class="text-2xl font-bold mb-4">Heavim</h3>
-                                <p class="opacity-90 mb-4">Advanced Catppuccin Mocha themed Neovim configuration with modern plugins and optimized workflow for developers</p>
-                                <div class="relative aspect-video overflow-hidden rounded-box mb-6">
-                                    <img src="https://placehold.co/600x400/1e1e2e/cdd6f4?text=Heavim+Neovim+Config" 
-                                        alt="Heavim Neovim Configuration Screenshot"
-                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                        loading="lazy" />
-                                    <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent flex items-end p-4">
-                                        <div class="flex gap-2">
-                                            <span class="badge badge-primary">Lua</span>
-                                            <span class="badge badge-secondary">Lazy.nvim</span>
-                                            <span class="badge badge-accent">Snacks.nvim</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex gap-4">
-                                    <button @click="showModal = true; previewUrl = 'https://eeeeeee.fly.dev/'"
-                                            class="btn btn-primary btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform"
-                                            aria-label="Preview Heavim Project">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                        </svg>
-                                        Preview
-                                    </button>
-                                    <a href="https://github.com/coltnovak/heavim" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform" aria-label="View Heavim Source Code">
-                                        <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                        </svg>
-                                        Code
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl w-full" data-aos="fade-up" data-aos-delay="200">
-                            <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
-                            <div class="relative">
-                                <div class="pulse-icon bg-secondary/20 p-4 rounded-2xl w-max mb-4">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/13092/13092250.png" 
-                                        alt="Rmath Engine Calculator Icon"
-                                        class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110"
-                                        loading="lazy" />
-                                </div>
-                                <h3 class="text-2xl font-bold mb-4">Rmath Engine</h3>
-                                <p class="opacity-90 mb-4">Advanced TUI calculator engine built in Rust with symbolic mathematics support and a minimal UI</p>
-                                <div class="relative aspect-video overflow-hidden rounded-box mb-6">
-                                    <img src="https://placehold.co/600x400/f38ba8/1e1e2e?text=Rmath+Calculator" 
-                                        alt="Rmath Engine Calculator Interface"
-                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                        loading="lazy" />
-                                    <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent flex items-end p-4">
-                                        <div class="flex gap-2">
-                                            <span class="badge badge-secondary">Rust</span>
-                                            <span class="badge badge-primary">CLI</span>
-                                            <span class="badge badge-accent">Mathematics</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex gap-4">
-                                    <button @click="showModal = true; previewUrl = 'https://rmath.fly.dev'"
-                                            class="btn btn-secondary btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform"
-                                            aria-label="Preview Rmath Engine">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                        </svg>
-                                        Preview
-                                    </button>
-                                    <a href="https://github.com/coltnovak/rmath" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform" aria-label="View Rmath Engine Source Code">
-                                        <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                        </svg>
-                                        Code
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="group relative bg-base-200 p-6 rounded-3xl hover:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl w-full" data-aos="fade-up" data-aos-delay="300">
-                            <div class="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-inherit"></div>
-                            <div class="relative">
-                                <div class="pulse-icon bg-accent/20 p-4 rounded-2xl w-max mb-4">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/518/518713.png" 
-                                        alt="YourFit AI Fitness App Icon"
-                                        class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110"
-                                        loading="lazy" />
-                                </div>
-                                <h3 class="text-2xl font-bold mb-4">YourFit AI</h3>
-                                <p class="opacity-90 mb-4">Intelligent fitness assistant mobile app with AI-powered workout recommendations and personalized training plans</p>
-                                <div class="relative aspect-video overflow-hidden rounded-box mb-6">
-                                    <img src="https://placehold.co/600x400/89b4fa/1e1e2e?text=YourFit+AI+App" 
-                                        alt="YourFit AI Mobile Application Interface"
-                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                        loading="lazy" />
-                                    <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 to-transparent flex items-end p-4">
-                                        <div class="flex gap-2">
-                                            <span class="badge badge-accent">Flutter</span>
-                                            <span class="badge badge-primary">Dart</span>
-                                            <span class="badge badge-secondary">AI/ML</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex gap-4">
-                                    <button @click="showModal = true; previewUrl = 'https://yourfit.demo'"
-                                            class="btn btn-accent btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform"
-                                            aria-label="Preview YourFit AI App">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                        </svg>
-                                        Preview
-                                    </button>
-                                    <a href="#/" class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform" aria-label="View YourFit AI Details">
-                                        Details →
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="flex justify-center mt-12">
-                        <a href="projects.html" class="btn btn-outline btn-lg gap-2 hover:scale-105 transition-all duration-300 group" aria-label="View All Projects">
-                            <span>View All Projects</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <div x-show="showModal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
-                        x-cloak
-                        x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0"
-                        x-transition:enter-end="opacity-100"
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100"
-                        x-transition:leave-end="opacity-0"
-                        @click.away="showModal = false">
-                        <div class="bg-base-100 rounded-box w-full max-w-[95vw] h-[90vh] flex flex-col shadow-2xl"
-                            x-transition:enter-start="opacity-0 transform scale-95"
-                            x-transition:enter-end="opacity-100 transform scale-100"
-                            x-transition:leave="transition ease-in duration-200"
-                            x-transition:leave-start="opacity-100 transform scale-100"
-                            x-transition:leave-end="opacity-0 transform scale-95">
-                            <div class="flex justify-between items-center p-4 border-b border-base-300">
-                                <h3 class="text-xl font-bold">Live Preview</h3>
-                                <button @click="showModal = false" class="btn btn-ghost btn-sm" aria-label="Close Preview">
-                                    ✕
-                                </button>
-                            </div>
-                            <div class="flex-1 overflow-hidden">
-                                <iframe :src="previewUrl" 
-                                        class="w-full h-full bg-base-200"
-                                        frameborder="0"
-                                        loading="lazy"
-                                        title="Project Preview"></iframe>
-                            </div>
+                        <div class="flex gap-4">
+                            <button @click="showModal = true; previewUrl = 'https://yourfit.demo'"
+                                    class="btn btn-accent btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                            <a href="#/" class="btn btn-ghost btn-sm flex-1 gap-2 hover:scale-[1.02] transition-transform">
+                                Details →
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-
-
-
-  <section id="about" class="py-20 px-4 bg-base-100" aria-labelledby="about-heading">
-            <div class="container mx-auto max-w-4xl text-center">
-                <h2 id="about-heading" class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 relative inline-block"
-                    data-aos="fade-down"
-                    data-aos-duration="800">
-                    <span class="relative z-10">About Me & Contact</span>
-                    <span class="absolute inset-x-0 bottom-0 h-3 bg-gradient-to-r from-primary/30 to-accent/50 rounded-full animate-highlight"></span>
-                </h2>
-                <p class="text-lg mb-12 opacity-90"
-                   data-aos="fade-down"
-                   data-aos-delay="200">
-                    Need something? Just contact me. Click on any of the cards below for more details about me and ways to get in touch.
-                </p>
+            <div class="flex justify-center mt-12">
+                <a href="projects.html" class="btn btn-outline btn-lg gap-2 hover:scale-105 transition-all duration-300 group">
+                    <span>View All Projects</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </a>
             </div>
 
-            <div class="container mx-auto max-w-4xl">
-                <article class="bg-base-200 shadow-2xl rounded-3xl overflow-hidden"
-                         data-aos="fade-up"
-                         data-aos-duration="1000"
-                         data-aos-delay="300">
-                    <div class="p-6 md:p-8">
-                        <div class="grid gap-6">
-                            <div x-data="{ open: false }" 
-                                 class="bg-base-300 p-4 md:p-6 rounded-xl hover:bg-primary/10 transition-all duration-300 cursor-pointer group border-2 border-transparent hover:border-primary/50 shadow-lg hover:shadow-2xl transform hover:scale-[1.02]"
-                                 data-aos="fade-down"
-                                 data-aos-delay="400"
-                                 @click="open = !open"
-                                 role="button"
-                                 aria-expanded="false"
-                                 :aria-expanded="open"
-                                 aria-controls="name-details"
-                                 tabindex="0"
-                                 @keydown.enter="open = !open"
-                                 @keydown.space="open = !open">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center gap-3 md:gap-4 min-w-0 flex-1">
-                                        <div class="bg-primary/20 p-3 md:p-4 rounded-full group-hover:bg-primary/30 transition-colors flex-shrink-0" aria-hidden="true">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                                            </svg>
-                                        </div>
-                                        <div class="min-w-0 flex-1">
-                                            <div class="text-primary font-bold text-lg md:text-xl truncate">Colt Novak</div>
-                                            <div class="text-sm opacity-70">Full Stack Developer</div>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center gap-2 flex-shrink-0">
-                                        <span class="text-xs bg-primary/20 px-2 md:px-3 py-1 rounded-full text-primary group-hover:bg-primary group-hover:text-primary-content hidden sm:block transition-colors">Click to expand</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary transform transition-transform group-hover:rotate-180" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                        </svg>
-                                    </div>
+            <div x-show="showModal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
+                x-cloak
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="transition ease-in duration-200"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                @click.away="showModal = false">
+                <div class="bg-base-100 rounded-box w-full max-w-[95vw] h-[90vh] flex flex-col shadow-2xl"
+                    x-transition:enter-start="opacity-0 transform scale-95"
+                    x-transition:enter-end="opacity-100 transform scale-100"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 transform scale-100"
+                    x-transition:leave-end="opacity-0 transform scale-95">
+                    <div class="flex justify-between items-center p-4 border-b border-base-300">
+                        <h3 class="text-xl font-bold">Live Preview</h3>
+                        <button @click="showModal = false" class="btn btn-ghost btn-sm">
+                            ✕
+                        </button>
+                    </div>
+                    <div class="flex-1 overflow-hidden">
+                        <iframe :src="previewUrl" 
+                                class="w-full h-full bg-base-200"
+                                frameborder="0"
+                                loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.pulse-icon {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1 }
+    50% { opacity: 0.7 }
+}
+</style>
+
+
+<style>
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.pulse-icon {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1 }
+    50% { opacity: 0.7 }
+}
+
+@media (min-width: 768px) {
+    .grid-flow-col {
+        grid-flow: row !important;
+    }
+    .auto-cols-[minmax(300px,1fr)] {
+        grid-auto-columns: auto !important;
+    }
+}
+</style>
+<section id="about" class="py-20 px-4 bg-base-100">
+    <div class="container mx-auto max-w-4xl text-center">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 relative inline-block"
+            data-aos="fade-down"
+            data-aos-duration="800">
+            <span class="relative z-10">About and Contact</span>
+            <span class="absolute inset-x-0 bottom-0 h-3 bg-gradient-to-r from-primary/30 to-accent/50 rounded-full animate-highlight"></span>
+        </h2>
+        <p class="text-lg mb-12 opacity-90"
+           data-aos="fade-down"
+           data-aos-delay="200">
+            Need something? Just contact me. (click on any of the cards for more details)
+        </p>
+    </div>
+
+    <div class="container mx-auto max-w-4xl">
+        <div class="bg-base-200 shadow-2xl rounded-3xl overflow-hidden"
+             data-aos="fade-up"
+             data-aos-duration="1000"
+             data-aos-delay="300">
+            <div class="p-6 md:p-8">
+                <div class="grid gap-6">
+                    <div x-data="{ open: false }" 
+                         class="bg-base-300 p-4 md:p-6 rounded-xl hover:bg-primary/10 transition-all duration-300 cursor-pointer group border-2 border-transparent hover:border-primary/50 shadow-lg hover:shadow-2xl transform hover:scale-[1.02]"
+                         data-aos="fade-down"
+                         data-aos-delay="400"
+                         @click="open = !open">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3 md:gap-4 min-w-0 flex-1">
+                                <div class="bg-primary/20 p-3 md:p-4 rounded-full group-hover:bg-primary/30 transition-colors flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                    </svg>
                                 </div>
-                                <div id="name-details" x-show="open" x-collapse class="mt-4">
-                                    <div class="pt-4 border-t border-base-100">
-                                        <p class="text-sm">Pronunciation: <span class="font-medium text-primary">"Kohlt No-vak"</span></p>
-                                        <p class="text-sm mt-2">I'm a full stack developer who loves building innovative web applications and contributing to open source projects. Currently studying at CodeRVA Regional High School while developing real-world applications.</p>
-                                    </div>
+                                <div class="min-w-0 flex-1">
+                                    <div class="text-primary font-bold text-lg md:text-xl truncate">Colt Novak</div>
+                                    <div class="text-sm opacity-70">Name</div>
                                 </div>
                             </div>
+                            <div class="flex items-center gap-2 flex-shrink-0">
+                                <span class="text-xs bg-primary/20 px-2 md:px-3 py-1 rounded-full text-primary group-hover:bg-primary group-hover:text-primary-content hidden sm:block transition-colors">Click to expand</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary transform transition-transform group-hover:rotate-180" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div x-show="open" x-collapse class="mt-4">
+                            <div class="pt-4 border-t border-base-100">
+                                <p class="text-sm">Pronunciation: <span class="font-medium text-primary">"Kohlt No-vak"</span></p>
+                            </div>
+                        </div>
+                    </div>
 
-                            <div x-data="{ open: false, step: 1 }" 
-                                 class="bg-base-300 p-4 md:p-6 rounded-xl hover:bg-secondary/10 transition-all duration-300 cursor-pointer group border-2 border-transparent hover:border-secondary/50 shadow-lg hover:shadow-2xl transform hover:scale-[1.02]"
-                                 data-aos="fade-down"
-                                 data-aos-delay="500"
-                                 @click="open = !open"
-                                 role="button"
-                                 aria-expanded="false"
-                                 :aria-expanded="open"
-                                 aria-controls="email-form"
-                                 tabindex="0"
-                                 @keydown.enter="open = !open"
-                                 @keydown.space="open = !open">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center gap-3 md:gap-4 min-w-0 flex-1">
-                                        <div class="bg-secondary/20 p-3 md:p-4 rounded-full group-hover:bg-secondary/30 transition-colors flex-shrink-0" aria-hidden="true">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                            </svg>
-                                        </div>
-                                        <div class="min-w-0 flex-1">
-                                            <div class="text-secondary font-bold text-sm md:text-lg lg:text-xl break-all">colton.novak@students.coderva.org</div>
-                                            <div class="text-sm opacity-70">Professional Email</div>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center gap-2 flex-shrink-0">
-                                        <span class="text-xs bg-secondary/20 px-2 md:px-3 py-1 rounded-full text-secondary hidden sm:block">Click to expand</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary transform transition-transform group-hover:rotate-180" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                        </svg>
-                                    </div>
+                    <div x-data="{ open: false, step: 1 }" 
+                         class="bg-base-300 p-4 md:p-6 rounded-xl hover:bg-secondary/10 transition-all duration-300 cursor-pointer group border-2 border-transparent hover:border-secondary/50 shadow-lg hover:shadow-2xl transform hover:scale-[1.02]"
+                         data-aos="fade-down"
+                         data-aos-delay="500"
+                         @click="open = !open">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3 md:gap-4 min-w-0 flex-1">
+                                <div class="bg-secondary/20 p-3 md:p-4 rounded-full group-hover:bg-secondary/30 transition-colors flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
                                 </div>
-                                <div id="email-form" x-show="open" x-collapse class="mt-4" @click.stop>
-                                    <form action="https://formspree.io/f/xrbqenjg" method="POST"
-                                          class="flex flex-col gap-4 p-4 md:p-6 bg-base-200 rounded-lg border border-base-100"
-                                          aria-labelledby="contact-form-heading">
-                                        <h3 id="contact-form-heading" class="sr-only">Contact Form</h3>
-                                        <div x-show="step === 1">
-                                            <label for="email-input" class="sr-only">Your email address</label>
-                                            <input type="email" name="_replyto" id="email-input"
-                                                   placeholder="Your email address (required)" 
-                                                   class="input input-bordered bg-base-300 w-full mb-4 focus:border-secondary"
-                                                   required>
-                                            <label for="subject-input" class="sr-only">Subject</label>
-                                            <input type="text" name="subject" id="subject-input"
-                                                   placeholder="Subject" 
-                                                   class="input input-bordered bg-base-300 w-full focus:border-secondary"
-                                                   required>
-                                            <button type="button" 
-                                                    class="btn btn-secondary w-full mt-4"
-                                                    @click="step = 2"
-                                                    aria-label="Continue to message step">
-                                                Next →
-                                            </button>
-                                        </div>
-
-                                        <div x-show="step === 2" x-collapse>
-                                            <label for="message-input" class="sr-only">Your message</label>
-                                            <textarea name="message" id="message-input"
-                                                      class="textarea textarea-bordered bg-base-300 w-full h-32 focus:border-secondary resize-none" 
-                                                      placeholder="Your message..."
-                                                      required></textarea>
-                                            <div class="flex gap-4 mt-4">
-                                                <button type="button" 
-                                                        class="btn btn-ghost flex-1"
-                                                        @click="step = 1"
-                                                        aria-label="Go back to previous step">
-                                                    ← Back
-                                                </button>
-                                                <button type="submit" 
-                                                        class="btn btn-secondary flex-1"
-                                                        aria-label="Send message">
-                                                    Send Message
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
+                                <div class="min-w-0 flex-1">
+                                    <div class="text-secondary font-bold text-sm md:text-lg lg:text-xl break-all">colton.novak@students.coderva.org</div>
+                                    <div class="text-sm opacity-70">Email</div>
                                 </div>
                             </div>
-
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div x-data="{ open: false }" 
-                                     class="bg-base-300 p-4 md:p-6 rounded-xl hover:bg-accent/10 transition-all duration-300 cursor-pointer group border-2 border-transparent hover:border-accent/50 shadow-lg hover:shadow-2xl transform hover:scale-[1.02]"
-                                     data-aos="fade-right"
-                                     data-aos-delay="600"
-                                     @click="open = !open"
-                                     role="button"
-                                     aria-expanded="false"
-                                     :aria-expanded="open"
-                                     aria-controls="age-details"
-                                     tabindex="0"
-                                     @keydown.enter="open = !open"
-                                     @keydown.space="open = !open">
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center gap-3 md:gap-4 min-w-0 flex-1">
-                                            <div class="bg-accent/20 p-3 md:p-4 rounded-full group-hover:bg-accent/30 transition-colors flex-shrink-0" aria-hidden="true">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
-                                                </svg>
-                                            </div>
-                                            <div class="min-w-0 flex-1">
-                                                <div class="text-accent font-bold text-lg md:text-xl">16 Years Old</div>
-                                                <div class="text-sm opacity-70">Age</div>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-2 flex-shrink-0">
-                                            <span class="text-xs bg-accent/20 px-2 py-1 rounded-full text-accent hidden sm:block">Click</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent transform transition-transform group-hover:rotate-180" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div id="age-details" x-show="open" x-collapse class="mt-4">
-                                        <div class="pt-4 border-t border-base-100">
-                                            <p class="text-sm">Birthday: <span class="font-medium text-accent">April 27, 2009</span></p>
-                                            <p class="text-sm mt-2">Started programming at age 14, now with 2+ years of experience in full-stack development and open source contributions.</p>
-                                        </div>
-                                    </div>
+                            <div class="flex items-center gap-2 flex-shrink-0">
+                                <span class="text-xs bg-secondary/20 px-2 md:px-3 py-1 rounded-full text-secondary hidden sm:block">Click to expand</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary transform transition-transform group-hover:rotate-180" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div x-show="open" x-collapse class="mt-4" @click.stop>
+                            <form action="https://formspree.io/f/xrbqenjg" method="POST"
+                                  class="flex flex-col gap-4 p-4 md:p-6 bg-base-200 rounded-lg border border-base-100">
+                                <div x-show="step === 1">
+                                    <input type="email" name="_replyto"
+                                           placeholder="Your email address (required)" 
+                                           class="input input-bordered bg-base-300 w-full mb-4 focus:border-secondary">
+                                    <input type="text" name="subject"
+                                           placeholder="Subject" 
+                                           class="input input-bordered bg-base-300 w-full focus:border-secondary"
+                                           required>
+                                    <button type="button" 
+                                            class="btn btn-secondary w-full mt-4"
+                                            @click="step = 2">
+                                        Next →
+                                    </button>
                                 </div>
 
-                                <div x-data="{ open: false }" 
-                                     class="bg-base-300 p-4 md:p-6 rounded-xl hover:bg-info/10 transition-all duration-300 cursor-pointer group border-2 border-transparent hover:border-info/50 shadow-lg hover:shadow-2xl transform hover:scale-[1.02]"
-                                     data-aos="fade-left"
-                                     data-aos-delay="700"
-                                     @click="open = !open"
-                                     role="button"
-                                     aria-expanded="false"
-                                     :aria-expanded="open"
-                                     aria-controls="location-details"
-                                     tabindex="0"
-                                     @keydown.enter="open = !open"
-                                     @keydown.space="open = !open">
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center gap-3 md:gap-4 min-w-0 flex-1">
-                                            <div class="bg-info/20 p-3 md:p-4 rounded-full group-hover:bg-info/30 transition-colors flex-shrink-0" aria-hidden="true">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 text-info" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                                </svg>
-                                            </div>
-                                            <div class="min-w-0 flex-1">
-                                                <div class="text-info font-bold text-lg md:text-xl">Richmond, Virginia</div>
-                                                <div class="text-sm opacity-70">Location</div>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-2 flex-shrink-0">
-                                            <span class="text-xs bg-info/20 px-2 py-1 rounded-full text-info hidden sm:block">Click</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-info transform transition-transform group-hover:rotate-180" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                            </svg>
-                                        </div>
+                                <div x-show="step === 2" x-collapse>
+                                    <textarea name="message"
+                                              class="textarea textarea-bordered bg-base-300 w-full h-32 focus:border-secondary resize-none" 
+                                              placeholder="Your message..."
+                                              required></textarea>
+                                    <div class="flex gap-4 mt-4">
+                                        <button type="button" 
+                                                class="btn btn-ghost flex-1"
+                                                @click="step = 1">
+                                            ← Back
+                                        </button>
+                                        <button type="submit" 
+                                                class="btn btn-secondary flex-1">
+                                            Send
+                                        </button>
                                     </div>
-                                    <div id="location-details" x-show="open" x-collapse class="mt-4">
-                                        <div class="pt-4 border-t border-base-100">
-                                            <p class="text-sm">School: <span class="font-medium text-info">CodeRVA Regional High School</span></p>
-                                            <p class="text-xs opacity-75 mt-1">Advanced programming education serving 15+ counties in Virginia</p>
-                                            <p class="text-sm mt-2">Available for remote work and local opportunities in the Richmond metropolitan area.</p>
-                                        </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div x-data="{ open: false }" 
+                             class="bg-base-300 p-4 md:p-6 rounded-xl hover:bg-accent/10 transition-all duration-300 cursor-pointer group border-2 border-transparent hover:border-accent/50 shadow-lg hover:shadow-2xl transform hover:scale-[1.02]"
+                             data-aos="fade-right"
+                             data-aos-delay="600"
+                             @click="open = !open">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3 md:gap-4 min-w-0 flex-1">
+                                    <div class="bg-accent/20 p-3 md:p-4 rounded-full group-hover:bg-accent/30 transition-colors flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
+                                        </svg>
                                     </div>
+                                    <div class="min-w-0 flex-1">
+                                        <div class="text-accent font-bold text-lg md:text-xl">16</div>
+                                        <div class="text-sm opacity-70">Age</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 flex-shrink-0">
+                                    <span class="text-xs bg-accent/20 px-2 py-1 rounded-full text-accent hidden sm:block">Click</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent transform transition-transform group-hover:rotate-180" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div x-show="open" x-collapse class="mt-4">
+                                <div class="pt-4 border-t border-base-100">
+                                    <p class="text-sm">Birthday: <span class="font-medium text-accent">April 27, 2009</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div x-data="{ open: false }" 
+                             class="bg-base-300 p-4 md:p-6 rounded-xl hover:bg-info/10 transition-all duration-300 cursor-pointer group border-2 border-transparent hover:border-info/50 shadow-lg hover:shadow-2xl transform hover:scale-[1.02]"
+                             data-aos="fade-left"
+                             data-aos-delay="700"
+                             @click="open = !open">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3 md:gap-4 min-w-0 flex-1">
+                                    <div class="bg-info/20 p-3 md:p-4 rounded-full group-hover:bg-info/30 transition-colors flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 text-info" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="min-w-0 flex-1">
+                                        <div class="text-info font-bold text-lg md:text-xl">Richmond, VA</div>
+                                        <div class="text-sm opacity-70">Location</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 flex-shrink-0">
+                                    <span class="text-xs bg-info/20 px-2 py-1 rounded-full text-info hidden sm:block">Click</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-info transform transition-transform group-hover:rotate-180" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div x-show="open" x-collapse class="mt-4">
+                                <div class="pt-4 border-t border-base-100">
+                                    <p class="text-sm">School: <span class="font-medium text-info">CodeRVA regional high school</span></p>
+                                    <p class="text-xs opacity-75 mt-1">(15+ counties represented)</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </article>
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
 
