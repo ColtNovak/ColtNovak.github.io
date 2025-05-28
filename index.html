@@ -12,9 +12,8 @@
   
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://coltnovak.com/">
-  <meta property="og:title" content="Colt Novak | Developer & Open Source Contributor">
+  <meta property="og:title" content="Colt Novak | Developer & Open Source Enthusiast">
   <meta property="og:description" content="Building robust solutions with Rust, Web technologies, and Linux systems. Explore my portfolio of innovative projects.">
-  <meta property="og:image" content="https://coltnovak.com/og-banner.jpg">
 
   <meta name="theme-color" content="#0f172a">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval';">
@@ -50,10 +49,7 @@
       }
     }
 
-    .contrast-fix {
-      color: var(--text-primary) !important;
-      background-color: var(--bg-primary) !important;
-    }
+  
   </style>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -78,7 +74,7 @@
     "alumniOf": "CodeRVA Regional High School",
     "knowsAbout": [
       "Rust Programming", 
-      "Linux System Administration",
+      "Linux SysAdmin",
       "Web Development",
       "Neovim Configuration",
       "Terminal Applications"
@@ -319,182 +315,195 @@
  
 </style>
 <section id="projects" 
-         class="py-20 px-4 bg-base-100" 
-         aria-labelledby="projects-heading"
-         x-data="{
-           projects: [
-             {
-               id: 'heavim',
-               name: 'Heavim',
-               description: 'Advanced Catppuccin mocha themed Neovim configuration with many plugins and optimized performance for highly-advanced workflows.',
-               icon: 'https://cdn-icons-png.flaticon.com/512/9364/9364669.png',
-               iconAlt: 'Neovim configuration icon',
-               image: 'https://placehold.co/600x400/1e1e2e/cdd6f4?text=Heavim+Neovim+Config',
-               imageAlt: 'Screenshot of Heavim Neovim configuration showing dark theme and code editing interface',
-               technologies: ['Lua', 'Lazy.nvim', 'Snacks.nvim'],
-               techColors: ['badge-primary', 'badge-secondary', 'badge-accent'],
-               buttonColor: 'btn-primary',
-               gradientColor: 'from-primary/10',
-               iconBg: 'bg-primary/20',
-               repository: 'https://github.com/ColtNovak/heavim',
-               preview: 'https://eeeeeee.fly.dev/',
-               type: 'SoftwareApplication'
-             },
-             {
-               id: 'rmath',
-               name: 'Rmath Engine',
-               description: 'High-performance TUI calculator engine built in Rust with symbolic mathematics support, advanced parsing, and interactive terminal interface.',
-               icon: 'https://cdn-icons-png.flaticon.com/512/13092/13092250.png',
-               iconAlt: 'Calculator and mathematics icon',
-               image: 'https://placehold.co/600x400/2d3748/e2e8f0?text=Rmath+TUI+Calculator',
-               imageAlt: 'Screenshot of Rmath terminal calculator showing mathematical expressions and results',
-               technologies: ['Rust', 'TUI', 'Mathematics'],
-               techColors: ['badge-secondary', 'badge-primary', 'badge-accent'],
-               buttonColor: 'btn-secondary',
-               gradientColor: 'from-secondary/10',
-               iconBg: 'bg-secondary/20',
-               repository: 'https://github.com/ColtNovak/rmath',
-               preview: 'https://rmath.fly.dev',
-               type: 'SoftwareApplication'
-             },
-             {
-               id: 'lfetch',
-               name: 'Lfetch system information tool.',
-               description: 'ultra fast, dependency free sysinfo fetching tool written in bash',
-               icon: 'https://cdn-icons-png.flaticon.com/512/518/518713.png',
-               iconAlt: 'computer icon',
-               image: 'https://placehold.co/600x400/059669/f0fdf4?text=Lfetch',
-               imageAlt: 'Screenshot of LFETCH',
-               technologies: ['Fetching', 'SysInfo', 'Bash'],
-               techColors: ['badge-accent', 'badge-primary', 'badge-secondary'],
-               buttonColor: 'btn-accent',
-               gradientColor: 'from-accent/10',
-               iconBg: 'bg-accent/20',
-               repository: 'https://github.com/ColtNovak/lfetch',
-               preview: 'https://lfetch.fly.dev/',
-               type: 'MobileApplication'
+           class="py-20 px-4 bg-base-100" 
+           aria-labelledby="projects-heading"
+           x-data="{
+             projects: [
+               {
+                 id: 'heavim',
+                 name: 'Heavim',
+                 description: 'Advanced Catppuccin mocha themed Neovim configuration with many plugins and optimized performance for highly-advanced workflows.',
+                 icon: 'https://cdn-icons-png.flaticon.com/512/9364/9364669.png',
+                 iconAlt: 'Neovim configuration icon',
+                 image: 'https://i.ibb.co/5g79rC7h/Z1Eg5fY.png',
+                 imageAlt: 'Screenshot of Heavim Neovim configuration ',
+                 technologies: ['Lua', 'Lazy.nvim', 'Snacks.nvim'],
+                 techColors: ['badge-primary', 'badge-secondary', 'badge-accent'],
+                 buttonColor: 'btn-primary',
+                 gradientColor: 'from-primary/10',
+                 iconBg: 'bg-primary/20',
+                 repository: 'https://github.com/ColtNovak/heavim',
+                 preview: 'https://eeeeeee.fly.dev/',
+                 type: 'Software',
+                 borderHover: 'hover:border-primary/50',
+                 gradientHover: 'from-primary/5'
+               },
+               {
+                 id: 'rmath',
+                 name: 'Rmath Engine',
+                 description: 'High-performance TUI calculator engine built in Rust with symbolic mathematics support, advanced parsing, and interactive terminal interface.',
+                 icon: 'https://cdn-icons-png.flaticon.com/512/13092/13092250.png',
+                 iconAlt: 'Calculator and mathematics icon',
+                 image: 'https://i.ibb.co/h1c3dzfs/image.png',
+                 imageAlt: 'Screenshot of Rmath terminal calculator showing mathematical expressions and results',
+                 technologies: ['Rust', 'TUI', 'Mathematics'],
+                 techColors: ['badge-secondary', 'badge-primary', 'badge-accent'],
+                 buttonColor: 'btn-secondary',
+                 gradientColor: 'from-secondary/10',
+                 iconBg: 'bg-secondary/20',
+                 repository: 'https://github.com/ColtNovak/rmath',
+                 preview: 'https://rmath.fly.dev',
+                 type: 'SoftwareApplication',
+                 borderHover: 'hover:border-secondary/50',
+                 gradientHover: 'from-secondary/5'
+               },
+               {
+                 id: 'lfetch',
+                 name: 'Lfetch',
+                 description: 'Ultra fast, dependency free sysinfo fetching tool written in bash. Written in under 150 lines or code, with full colored distribution logo and 5-10ms load times.',
+                 icon: 'https://cdn-icons-png.flaticon.com/512/518/518713.png',
+                 iconAlt: 'computer icon',
+                 image: 'https://i.imgur.com/TE9lQ2o.png',
+                 imageAlt: 'Screenshot of LFETCH',
+                 technologies: ['Fetching', 'SysInfo', 'Bash'],
+                 techColors: ['badge-accent', 'badge-primary', 'badge-secondary'],
+                 buttonColor: 'btn-accent',
+                 gradientColor: 'from-accent/10',
+                 iconBg: 'bg-accent/20',
+                 repository: 'https://github.com/ColtNovak/lfetch',
+                 preview: 'https://lfetch.fly.dev/',
+                 type: 'TUIapplication',
+                 borderHover: 'hover:border-accent/50',
+                 gradientHover: 'from-accent/5'
+               }
+             ],
+             showModal: false,
+             previewUrl: '',
+             openPreview(url) {
+               this.previewUrl = url;
+               this.showModal = true;
              }
-           ],
-           showModal: false,
-           previewUrl: '',
-           openPreview(url) {
-             this.previewUrl = url;
-             this.showModal = true;
-           }
-         }">
-  <div class="container mx-auto max-w-6xl">
-    <header class="text-center mb-16" data-aos="fade-down">
-      <h2 id="projects-heading" class="text-3xl md:text-4xl font-bold mb-4 relative inline-block">
-        <span class="relative z-10">Featured Projects</span>
-        <span class="absolute inset-x-0 bottom-0 h-3 bg-gradient-to-r from-primary/40 to-accent/60 rounded-full animate-highlight" aria-hidden="true"></span>
-      </h2>
-      <p class="text-lg text-base-content/90 max-w-2xl mx-auto">
-        Explore my latest work in Rust development, web applications, and system programming tools.
-      </p>
-    </header>
+           }">
+    <div class="container mx-auto max-w-6xl">
+      <header class="text-center mb-16">
+        <h2 id="projects-heading" class="text-3xl md:text-4xl font-bold mb-4 relative inline-block">
+          <span class="relative z-10">Featured Projects</span>
+          <span class="absolute inset-x-0 bottom-0 h-3 bg-gradient-to-r from-primary/40 to-accent/60 rounded-full animate-highlight" aria-hidden="true"></span>
+        </h2>
+        <p class="text-lg text-base-content/90 max-w-2xl mx-auto">
+          Explore my latest work in Rust development, web applications, and system programming tools.
+        </p>
+      </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
-      <template x-for="project in projects" :key="project.id">
-        <article class="group bg-base-200 p-6 rounded-xl shadow-lg border border-base-content/10 hover:border-primary/20 transition-all"
-                 role="listitem"
-                 itemscope 
-                 :itemtype="`https://schema.org/${project.type}`"
-                 data-aos="fade-up">
-          <div class="relative">
-            <div class="p-4 rounded-xl mb-4" :class="project.iconBg">
-              <img :src="project.icon" 
-                   :alt="project.iconAlt"
-                   class="w-16 h-16 object-contain"
-                   loading="lazy" />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
+        <template x-for="project in projects" :key="project.id">
+          <article class="group relative project-card bg-base-200 p-6 rounded-xl shadow-lg border border-base-content/10 transition-all"
+                  :class="project.borderHover"
+                  role="listitem"
+                  itemscope 
+                  :itemtype="`https://schema.org/${project.type}`">
+            <div class="absolute inset-0 bg-gradient-to-br to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"
+                 :class="project.gradientHover" 
+                 aria-hidden="true"></div>
+            
+            <div class="relative">
+              <div class="p-4 rounded-xl mb-4" :class="project.iconBg">
+                <img :src="project.icon" 
+                      :alt="project.iconAlt"
+                      class="w-16 h-16 object-contain"
+                      loading="lazy" />
+              </div>
+              
+              <h3 class="text-2xl font-bold mb-4 text-white" itemprop="name" x-text="project.name"></h3>
+              
+              <p class="text-base-content/90 mb-4 leading-relaxed" itemprop="description" x-text="project.description"></p>
+              
+              <div class="relative aspect-video mb-6 overflow-hidden rounded-lg">
+                <img :src="project.image" 
+                      :alt="project.imageAlt"
+                      class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy" />
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-base-300/90 to-transparent p-4">
+                  <div class="flex flex-wrap gap-2" role="list" aria-label="Technologies used">
+                    <template x-for="(tech, index) in project.technologies" :key="index">
+                      <span class="badge font-medium" 
+                            :class="project.techColors[index]" 
+                            x-text="tech"></span>
+                    </template>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="flex gap-3" role="group" aria-label="Project actions">
+                <button @click="openPreview(project.preview)"
+                        class="btn btn-sm flex-1 gap-2 font-medium"
+                        :class="project.buttonColor"
+                        :aria-describedby="`${project.id}-preview-desc`">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0zM2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  Preview
+                </button>
+                <a :href="project.repository" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="btn btn-outline btn-sm flex-1 gap-2 font-medium"
+                    itemprop="codeRepository">
+                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  Code
+                </a>
+              </div>
             </div>
-            
-            <h3 class="text-2xl font-bold mb-4 text-white" itemprop="name" x-text="project.name"></h3>
-            
-            <p class="text-base-content/90 mb-4 leading-relaxed" itemprop="description" x-text="project.description"></p>
-            
-            <div class="relative aspect-video mb-6 overflow-hidden rounded-lg">
-              <img :src="project.image" 
-                   :alt="project.imageAlt"
-                   class="w-full h-full object-cover"
-                   loading="lazy" />
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-base-300/90 to-transparent p-4">
-                <div class="flex flex-wrap gap-2" role="list" aria-label="Technologies used">
-                  <template x-for="(tech, index) in project.technologies" :key="index">
-                    <span class="badge font-medium" 
-                          :class="project.techColors[index]" 
-                          x-text="tech"></span>
-                  </template>
+          </article>
+        </template>
+      </div>
+
+      <div x-show="showModal" 
+          x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave="transition ease-in duration-200"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
+          class="fixed inset-0 z-50 overflow-y-auto"
+          x-cloak>
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+          <div class="fixed inset-0 transition-opacity" @click="showModal = false">
+            <div class="absolute inset-0 bg-black opacity-75"></div>
+          </div>
+
+          <div class="inline-block align-bottom bg-base-200 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+            <div class="bg-base-200 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-semibold">Project Preview</h3>
+                <button @click="showModal = false" class="btn btn-sm btn-circle btn-ghost">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="aspect-video w-full bg-base-300 rounded-lg flex items-center justify-center">
+                <iframe :src="previewUrl" 
+                        class="w-full h-full rounded-lg" 
+                        frameborder="0"
+                        x-show="previewUrl"></iframe>
+                <div x-show="!previewUrl" class="text-center">
+                  <p class="text-base-content/60">Loading preview...</p>
                 </div>
               </div>
             </div>
-            
-            <div class="flex gap-3" role="group" aria-label="Project actions">
-              <button @click="openPreview(project.preview)"
-                      class="btn btn-sm flex-1 gap-2 font-medium"
-                      :class="project.buttonColor"
-                      :aria-describedby="`${project.id}-preview-desc`">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0zM2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-                Preview
+            <div class="bg-base-300 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+              <button @click="showModal = false" class="btn btn-primary">
+                Close
               </button>
-              <a :href="project.repository" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 class="btn btn-outline btn-sm flex-1 gap-2 font-medium"
-                 itemprop="codeRepository">
-                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-                Code
-              </a>
             </div>
           </div>
-        </article>
-      </template>
+        </div>
+      </div>
     </div>
-
-     <div x-show="showModal" 
-         x-transition:enter="transition ease-out duration-300"
-         x-transition:enter-start="opacity-0"
-         x-transition:enter-end="opacity-100"
-         x-transition:leave="transition ease-in duration-200"
-         x-transition:leave-start="opacity-100"
-         x-transition:leave-end="opacity-0"
-         class="fixed inset-0 z-50 overflow-y-auto"
-         x-cloak>
-      <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-        <div class="fixed inset-0 transition-opacity" @click="showModal = false">
-          <div class="absolute inset-0 bg-black opacity-75"></div>
-        </div>
-
-        <div class="inline-block align-bottom bg-base-200 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
-          <div class="bg-base-200 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-lg font-semibold">Project Preview</h3>
-              <button @click="showModal = false" class="btn btn-sm btn-circle btn-ghost">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-              </button>
-            </div>
-            <div class="aspect-video w-full bg-base-300 rounded-lg flex items-center justify-center">
-              <iframe :src="previewUrl" 
-                      class="w-full h-full rounded-lg" 
-                      frameborder="0"
-                      x-show="previewUrl"></iframe>
-              <div x-show="!previewUrl" class="text-center">
-                <p class="text-base-content/60">Loading preview...</p>
-              </div>
-            </div>
-          </div>
-          <div class="bg-base-300 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-            <button @click="showModal = false" class="btn btn-primary">
-              Close
-            </button>
-          </div>
-        </div>
-</section>
+  </section>
 <style>
 .pulse-icon {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -534,133 +543,128 @@
     }
 }
 </style>
-<section id="about" class="py-20 px-4 bg-base-100" aria-labelledby="about-heading">
+ <section id="about" class="py-20 px-4 bg-base-100" aria-labelledby="about-heading">
   <div class="container mx-auto max-w-4xl">
-    <div class="bg-base-200 rounded-3xl shadow-lg border border-base-content/10 overflow-hidden">
-      <div class="p-6 md:p-8 lg:p-12">
-        <header class="text-center mb-8">
-          <h2 id="about-heading" class="text-3xl md:text-4xl font-bold mb-4">
-            <span class="relative inline-block">
-              About Me
-              <span class="absolute inset-x-0 bottom-0 h-3 bg-gradient-to-r from-primary/40 to-accent/60 rounded-full animate-highlight"></span>
-            </span>
-          </h2>
-          <p class="text-lg text-base-content/90 max-w-xl mx-auto">
-            16-year-old full stack developer from Richmond, VA specializing in Rust, web development, and Linux systems
-          </p>
-        </header>
+    <header class="text-center mb-12">
+      <h2 id="about-heading" class="text-3xl md:text-4xl font-bold mb-4 relative inline-block">
+        <span class="relative z-10">About Me</span>
+        <span class="absolute inset-x-0 bottom-0 h-3 bg-gradient-to-r from-primary/40 to-accent/60 rounded-full animate-highlight"></span>
+      </h2>
+      <p class="text-lg text-base-content/90 max-w-xl mx-auto">
+        16-year-old full stack developer from Richmond, VA specializing in Rust, web development, and Linux systems
+      </p>
+    </header>
 
-        <div class="space-y-6" x-data="{ openSection: null }">
-          <article class="bg-base-300/50 rounded-xl border border-base-content/10" 
-                   x-data="{ open: false }"
-                   role="region">
-            <div class="p-6 cursor-pointer" @click="open = !open" role="button">
-              <div class="flex justify-between items-center">
-                <h3 class="text-xl font-semibold text-primary">Contact Information</h3>
-                <svg class="w-6 h-6 text-primary transform transition-transform" 
-                     :class="{ 'rotate-180': open }" 
-                     fill="none" 
-                     stroke="currentColor" 
-                     viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </div>
+    <div class="bg-base-200 rounded-3xl shadow-lg border border-base-content/10 overflow-hidden">
+      <div class="p-6 md:p-8 lg:p-10">
+        <div class="space-y-6" x-data="{ 
+          contactOpen: false, 
+          factsOpen: false, 
+          emailOpen: true,
+          locationOpen: false,
+          profileOpen: false
+        }">
+          <div class="bg-base-300/50 rounded-xl border border-base-content/10 overflow-hidden">
+            <div class="p-6 cursor-pointer flex justify-between items-center" @click="contactOpen = !contactOpen" role="button">
+              <h3 class="text-xl font-semibold text-primary">Contact Information</h3>
+              <svg class="w-6 h-6 text-primary transform transition-transform" 
+                   :class="{ 'rotate-180': contactOpen }" 
+                   fill="none" 
+                   stroke="currentColor" 
+                   viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
             </div>
-            <div x-show="open" x-collapse class="p-6 pt-0">
+            <div x-show="contactOpen" x-collapse class="p-6 pt-0">
               <dl class="space-y-3">
-                <div class="flex items-center gap-3">
-                  <dt class="w-8">
-                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                    </svg>
-                  </dt>
+                <div class="flex items-center gap-4 p-3">
+                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
                   <dd class="text-base text-base-content/90">
                     colton.novak@students.coderva.org
                   </dd>
                 </div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="bg-base-300/50 rounded-xl border border-base-content/10" 
-                   x-data="{ open: false }"
-                   role="region">
-            <div class="p-6 cursor-pointer" @click="open = !open" role="button">
-              <div class="flex justify-between items-center">
-                <h3 class="text-xl font-semibold text-secondary">Quick Facts</h3>
-                <svg class="w-6 h-6 text-secondary transform transition-transform" 
-                     :class="{ 'rotate-180': open }" 
-                     fill="none" 
-                     stroke="currentColor" 
-                     viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </div>
-            </div>
-            <div x-show="open" x-collapse class="p-6 pt-0">
-              <dl class="space-y-3">
-                <div class="flex items-center gap-3">
-                  <dt class="w-8">
-                    <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                    </svg>
-                  </dt>
+                <div class="flex items-center gap-4 p-3">
+                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                  </svg>
                   <dd class="text-base text-base-content/90">
-                    Born: April 27, 2009 (16 years)
+                    (804) 944-7432
+                  </dd>
+                </div>
+                <div class="flex items-center gap-4 p-3">
+                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  <dd class="text-base text-base-content/90">
+                    @ColtNovak on github
                   </dd>
                 </div>
               </dl>
             </div>
-          </article>
-
-          <article class="bg-base-300/50 rounded-xl border border-base-content/10" 
-                   x-data="{ open: false }"
-                   role="region">
-            <div class="p-6 cursor-pointer" @click="open = !open" role="button">
-              <div class="flex justify-between items-center">
-                <h3 class="text-xl font-semibold text-accent">Location</h3>
-                <svg class="w-6 h-6 text-accent transform transition-transform" 
-                     :class="{ 'rotate-180': open }" 
-                     fill="none" 
-                     stroke="currentColor" 
-                     viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </div>
+          </div>
+          <div class="bg-base-300/50 rounded-xl border border-base-content/10 overflow-hidden">
+            <div class="p-6 cursor-pointer flex justify-between items-center" @click="factsOpen = !factsOpen" role="button">
+              <h3 class="text-xl font-semibold text-secondary">Quick Facts</h3>
+              <svg class="w-6 h-6 text-secondary transform transition-transform" 
+                   :class="{ 'rotate-180': factsOpen }" 
+                   fill="none" 
+                   stroke="currentColor" 
+                   viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
             </div>
-            <div x-show="open" x-collapse class="p-6 pt-0">
-              <div class="flex items-start gap-3 mb-6">
-                <svg class="w-6 h-6 text-accent mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                </svg>
-                <div>
-                  <p class="text-base text-base-content/90 mb-2">Richmond, Virginia</p>
-                  <p class="text-sm text-base-content/70">CodeRVA Regional High School</p>
-                  <p class="text-sm text-base-content/70">Serving 15+ counties</p>
+            <div x-show="factsOpen" x-collapse class="p-6 pt-0">
+              <dl class="space-y-3">
+                <div class="flex items-center gap-4 p-3">
+                  <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                  </svg>
+                  <dd class="text-base text-base-content/90">
+                    Born: April 27, 2009 (16 years)
+                  </dd>
                 </div>
-              </div>
-            
+                <div class="flex items-center gap-4 p-3">
+                  <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                  <dd class="text-base text-base-content/90">
+                    Location: Richmond, Virginia
+                  </dd>
+                </div>
+                <div class="flex items-center gap-4 p-3">
+                  <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                  </svg>
+                  <dd class="text-base text-base-content/90">
+                    Experience: 3+ years coding
+                  </dd>
+                </div>
+              </dl>
             </div>
-          </article>
+          </div>
 
-          <article class="bg-base-300/50 rounded-xl border border-base-content/10" 
-                   x-data="{ open: true }"
-                   role="region">
-            <div class="p-6 cursor-pointer" @click="open = !open" role="button">
-              <div class="flex justify-between items-center">
-                <h3 class="text-xl font-semibold text-primary">Get in Touch</h3>
-                <svg class="w-6 h-6 text-primary transform transition-transform" 
-                     :class="{ 'rotate-180': open }" 
-                     fill="none" 
-                     stroke="currentColor" 
-                     viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </div>
+          <div class="bg-base-300/50 rounded-xl border border-base-content/10 overflow-hidden">
+            <div class="p-6 cursor-pointer flex justify-between items-center" @click="emailOpen = !emailOpen" role="button">
+              <h3 class="text-xl font-semibold text-accent">Get in Touch</h3>
+              <svg class="w-6 h-6 text-accent transform transition-transform" 
+                   :class="{ 'rotate-180': emailOpen }" 
+                   fill="none" 
+                   stroke="currentColor" 
+                   viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
             </div>
-            <div x-show="open" x-collapse class="p-6 pt-0">
+            <div x-show="emailOpen" class="p-6 pt-0">
               <form action="https://formspree.io/f/xqkrnjqz" method="POST" class="space-y-4">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-base-content/90 mb-2">Your Name</label>
+                  <input type="text" id="name" name="name" required
+                        class="w-full px-4 py-2 bg-base-200 rounded-lg border border-base-content/10 focus:border-primary focus:ring-2 focus:ring-primary/50"
+                        placeholder="John Doe">
+                </div>
                 <div>
                   <label for="email" class="block text-sm font-medium text-base-content/90 mb-2">Your Email</label>
                   <input type="email" id="email" name="email" required
@@ -674,18 +678,135 @@
                             placeholder="Your message..."></textarea>
                 </div>
                 <button type="submit" 
-                        class="w-full btn btn-primary gap-2"
+                        class="w-full btn btn-accent gap-2"
                         aria-label="Send message">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
                   Send Message
                 </button>
               </form>
             </div>
-          </article>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-base-300/50 rounded-xl border border-base-content/10 overflow-hidden">
+              <div class="p-6 cursor-pointer flex justify-between items-center" @click="locationOpen = !locationOpen" role="button">
+                <h3 class="text-xl font-semibold text-primary">Location</h3>
+                <svg class="w-6 h-6 text-primary transform transition-transform" 
+                     :class="{ 'rotate-180': locationOpen }" 
+                     fill="none" 
+                     stroke="currentColor" 
+                     viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </div>
+              <div x-show="locationOpen" x-collapse class="p-6 pt-0">
+                <div class="flex items-start gap-4 mb-6">
+                  <svg class="w-6 h-6 text-primary mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                  <div>
+                    <p class="text-base text-base-content/90 mb-2">Richmond, Virginia</p>
+                    <p class="text-sm text-base-content/70">CodeRVA Regional High School</p>
+                    <p class="text-sm text-base-content/70">Serving 15+ counties</p>
+                  </div>
+                </div>
+                
+                <div class="mt-6">
+                  <h4 class="font-bold text-base text-primary mb-3">Richmond Tech Scene</h4>
+                  <p class="text-sm text-base-content/90 mb-4">
+                    Richmond has a growing tech community with opportunities for young developers:
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <svg class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span class="text-sm">Active developer meetups and hackathons</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <svg class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span class="text-sm">Startup incubators and tech accelerators</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <svg class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span class="text-sm">Strong university computer science programs</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-base-300/50 rounded-xl border border-base-content/10 overflow-hidden">
+              <div class="p-6 cursor-pointer flex justify-between items-center" @click="profileOpen = !profileOpen" role="button">
+                <h3 class="text-xl font-semibold text-secondary">Developer Profile</h3>
+                <svg class="w-6 h-6 text-secondary transform transition-transform" 
+                     :class="{ 'rotate-180': profileOpen }" 
+                     fill="none" 
+                     stroke="currentColor" 
+                     viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </div>
+              <div x-show="profileOpen" x-collapse class="p-6 pt-0">
+                <div class="mb-6">
+                  <h4 class="font-bold text-base text-secondary mb-3">Specialties</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <svg class="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span class="text-sm">Rust Systems Programming</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <svg class="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span class="text-sm">Web Development (Full Stack)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <svg class="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span class="text-sm">Linux Administration</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <svg class="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span class="text-sm">Neovim Configuration</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 class="font-bold text-base text-secondary mb-3">Education</h4>
+                  <div class="space-y-3">
+                    <div class="bg-base-200/50 p-3 rounded-lg">
+                      <div class="font-medium text-sm">CodeRVA Regional High School</div>
+                      <div class="text-xs text-base-content/70">2023 - Present</div>
+                    </div>
+                    <div class="bg-base-200/50 p-3 rounded-lg">
+                      <div class="font-medium text-sm">Advanced Computer Science</div>
+                      <div class="text-xs text-base-content/70">Focus on Web & Systems Development</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+   </section>
+
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
 
