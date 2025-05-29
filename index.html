@@ -466,63 +466,49 @@
         </template>
       </div>
 
-  <div x-show="showModal" 
-        x-transition:enter="transition ease-out duration-300"
-        x-transition:enter-start="opacity-0"
-        x-transition:enter-end="opacity-100"
-        x-transition:leave="transition ease-in duration-200"
-        x-transition:leave-start="opacity-100"
-        x-transition:leave-end="opacity-0"
-        class="fixed inset-0 z-50 overflow-y-auto"
-        x-cloak>
-    <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-      <div class="fixed inset-0 transition-opacity" @click="showModal = false">
-        <div class="absolute inset-0 bg-black opacity-75"></div>
-      </div>
+      <div x-show="showModal" 
+          x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave="transition ease-in duration-200"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
+          class="fixed inset-0 z-50 overflow-y-auto"
+          x-cloak>
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+          <div class="fixed inset-0 transition-opacity" @click="showModal = false">
+            <div class="absolute inset-0 bg-black opacity-75"></div>
+          </div>
 
-      <div 
-        :class="fullscreen 
-                  ? 'fixed inset-0 w-full h-full rounded-none' 
-                  : 'inline-block sm:my-8 sm:max-w-6xl sm:w-[90%] max-h-[90vh]'"
-        class="align-bottom bg-base-200 text-left overflow-hidden shadow-xl transform transition-all sm:align-middle rounded-lg"
-      >
-        <div class="bg-base-200 px-4 pt-5 pb-4 sm:p-6 sm:pb-4 h-full flex flex-col">
-          <div class="flex justify-between items-center mb-4">
-            <h3 class="text-lg font-semibold">Project Preview</h3>
-            <div class="flex items-center gap-2">
-              <button @click="fullscreen = !fullscreen" class="btn btn-sm btn-ghost" :title="fullscreen ? 'Exit Fullscreen' : 'Fullscreen'">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                        :d="fullscreen 
-                              ? 'M9 13H5v6h6v-4H9v-2zm6-2h4V5h-6v4h2v2zm0 6h-2v4h6v-6h-4v2zM9 5v2H7v2H5V5h4z' 
-                              : 'M4 4h6v2H6v4H4V4zm10 0h6v6h-2V6h-4V4zm6 10v6h-6v-2h4v-4h2zm-10 6H4v-6h2v4h4v2z'" />
-                </svg>
-              </button>
-              <button @click="showModal = false" class="btn btn-sm btn-circle btn-ghost" title="Close">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
+          <div class="inline-block align-bottom bg-base-200 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+            <div class="bg-base-200 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-semibold">Project Preview</h3>
+                <button @click="showModal = false" class="btn btn-sm btn-circle btn-ghost">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="aspect-video w-full bg-base-300 rounded-lg flex items-center justify-center">
+                <iframe :src="previewUrl" 
+                        class="w-full h-full rounded-lg" 
+                        frameborder="0"
+                        x-show="previewUrl"></iframe>
+                <div x-show="!previewUrl" class="text-center">
+                  <p class="text-base-content/60">Loading preview...</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-base-300 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+              <button @click="showModal = false" class="btn btn-primary">
+                Close
               </button>
             </div>
           </div>
-              <div class="aspect-video w-full bg-base-300 rounded-lg flex items-center justify-center"><iframe :src="previewUrl" 
-                    class="w-full h-full rounded-lg" 
-                    frameborder="0"
-                    x-show="previewUrl"></iframe>
-            <div x-show="!previewUrl" class="text-center">
-              <p class="text-base-content/60">Loading preview...</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-base-300 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-          <button @click="showModal = false" class="btn btn-primary">Close</button>
         </div>
       </div>
     </div>
-  </div>
-
-
   </section>
 <style>
 
