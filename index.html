@@ -466,7 +466,6 @@
         </template>
       </div>
 
-    <div x-data="{ showModal: false, previewUrl: '', fullscreen: false }">
   <div x-show="showModal" 
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0"
@@ -506,9 +505,7 @@
               </button>
             </div>
           </div>
-
-          <div class="aspect-video w-full bg-base-300 rounded-lg flex items-center justify-center grow">
-            <iframe :src="previewUrl" 
+              <div class="aspect-video w-full bg-base-300 rounded-lg flex items-center justify-center"><iframe :src="previewUrl" 
                     class="w-full h-full rounded-lg" 
                     frameborder="0"
                     x-show="previewUrl"></iframe>
@@ -524,7 +521,7 @@
       </div>
     </div>
   </div>
-</div>
+
 
   </section>
 <style>
