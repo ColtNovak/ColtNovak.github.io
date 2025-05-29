@@ -6,16 +6,26 @@
     display: none;
 }
 
-.pulse-icon {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
+  .pulse-icon {
+        position: relative;
+        transition: transform 0.3s ease;
+    }
+
+    .pulse-icon:hover {
+        animation: pulse 1s infinite;
+    }
 @media (max-width: 768px) {
   [x-bind\:style] { 
     max-height: none !important; 
     @apply overflow-visible;
   }
   
-  .card-body {
+  .card-body {  .pulse-icon {
+        position: relative;
+        transition: transform 0.3s ease;
+    }
+
+    
     @apply p-4 break-words;
   }
 
