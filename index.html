@@ -146,55 +146,54 @@
     </a>
   </div>
 </div>
+<section class="hero min-h-screen bg-base-100" id="home" aria-labelledby="hero-heading" role="banner">
+  <div class="hero-content flex-col lg:flex-row-reverse gap-12 lg:gap-24 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <div class="relative animate-float" data-aos="fade-left" data-aos-duration="1000">
+      <div class="w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 bg-primary/20 rounded-full absolute -inset-4 blur-3xl animate-pulse" aria-hidden="true"></div>
+      <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?cs=srgb&dl=pexels-luis-gomes-166706-546819.jpg&fm=jpg" 
+           alt="Portrait of Colt Novak, a young developer working on a laptop with code in the background" 
+           class="relative w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full shadow-2xl border-4 border-primary/30 hover:border-primary focus:border-primary transition-all duration-300 ease-in-out transform hover:scale-105 focus:scale-105"
+           width="320" 
+           height="320"
+           loading="eager"
+           fetchpriority="high" />
+    </div>
 
-<section class="hero min-h-screen px-4" id="home" aria-labelledby="hero-heading" role="banner">
-      <div class="hero-content flex-col lg:flex-row-reverse gap-16">
-        <div class="floating relative animate-float" data-aos="fade-left" data-aos-duration="1000">
-          <div class="w-64 h-64 bg-primary/20 rounded-full absolute -inset-4 blur-2xl" aria-hidden="true"></div>
-          <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?cs=srgb&dl=pexels-luis-gomes-166706-546819.jpg&fm=jpg" 
-               alt="Portrait of Colt Novak, a young developer working on a laptop with code in the background" 
-               class="w-64 h-64 rounded-full shadow-2xl border-4 border-primary/20 hover:border-primary transition-all"
-               width="256" 
-               height="256"
-               loading="eager"
-               fetchpriority="high" />
-        </div>
-
-        <div class="text-center lg:text-left max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
-          <header>
-            <h1 id="hero-heading" class="font-bold text-4xl md:text-5xl lg:text-7xl leading-tight">
-              Developer &<br>
-              <span class="relative inline-block z-10">
-                <span class="absolute inset-x-0 bottom-0.5 h-4 bg-gradient-to-r from-primary/30 to-accent/50 animate-highlight" aria-hidden="true"></span>
-                <span class="relative text-accent">Open Source</span>
-              </span> Enthusiast
-            </h1>
-          </header>
-          
-          <p class="py-6 opacity-90 text-lg md:text-xl transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]">
-            Hi! I'm Colt Novak. I am a 16-year-old full stack developer from <strong>Richmond, VA</strong> specializing in <strong>Rust</strong>, 
-            <strong>web development</strong>, and <strong>Linux system administration</strong>. 
-            Passionate about creating reliable software solutions to fit any use-case.
-          </p>
-          
-          <div class="flex flex-wrap gap-4 justify-center lg:justify-start" role="group" aria-label="Main navigation">
-            <a href="#projects" 
-               class="btn btn-primary" 
-               aria-describedby="projects-desc">
-              View My Projects
-            </a>
-            <span id="projects-desc" class="sr-only">Navigate to featured projects section</span>
-            
-            <a href="#about" 
-               class="btn btn-outline" 
-               aria-describedby="contact-desc">
-              Get in Touch
-            </a>
-            <span id="contact-desc" class="sr-only">Navigate to contact information</span>
-          </div>
-        </div>
+    <div class="text-center lg:text-left max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
+      <header>
+        <h1 id="hero-heading" class="font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight mb-6">
+          Developer &<br>
+          <span class="relative inline-block z-10 whitespace-nowrap">
+            <span class="absolute inset-x-0 bottom-1 sm:bottom-1.5 h-3 sm:h-4 md:h-5 bg-gradient-to-r from-primary/40 to-accent/60 animate-highlight" aria-hidden="true"></span>
+            <span class="relative text-accent">Open Source</span>
+          </span> Enthusiast
+        </h1>
+      </header>
+      
+      <p class="py-6 opacity-90 text-lg sm:text-xl md:text-2xl leading-relaxed">
+        Hi! I'm Colt Novak. A 16-year-old full stack developer from <strong>Richmond, VA</strong> specializing in <strong>Rust</strong>, 
+        <strong>web development</strong>, and <strong>Linux system administration</strong>. 
+        Passionate about creating reliable software solutions to fit any use-case.
+      </p>
+      
+      <div class="flex flex-wrap gap-4 justify-center lg:justify-start mt-6" role="group" aria-label="Main navigation">
+        <a href="#projects" 
+           class="btn btn-primary btn-md sm:btn-lg transform hover:scale-105 focus:scale-105 transition-transform duration-300 ease-in-out" 
+           aria-describedby="projects-desc">
+          View My Projects
+        </a>
+        <span id="projects-desc" class="sr-only">Navigate to featured projects section</span>
+        
+        <a href="#about" 
+           class="btn btn-outline btn-accent btn-md sm:btn-lg transform hover:scale-105 focus:scale-105 transition-transform duration-300 ease-in-out" 
+           aria-describedby="contact-desc">
+          Get in Touch
+        </a>
+        <span id="contact-desc" class="sr-only">Navigate to contact information</span>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
 <section class="py-20 px-4 bg-base-100" id="skills" aria-labelledby="skills-heading">
   <div class="container mx-auto max-w-6xl">
